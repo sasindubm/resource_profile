@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class GramaNiladariDivision extends Model
 {
-    protected $fillable = ['GNDCode', 'GNDName'];
+    protected $fillable = ['gnd_code', 'gnd_name','ds_code','gnd_uid'];
 }
