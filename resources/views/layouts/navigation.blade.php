@@ -22,8 +22,8 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 2') }}
+                    <x-nav-link :href="route('env')">
+                        {{ __('පාරිසරික තොරතුරු') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -133,8 +133,8 @@
             <x-responsive-nav-link :href="route('basic')" :active="request()->routeIs('dashboard')">
                 {{ __('මූලික තොරතුරු') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
+            <x-responsive-nav-link :href="route('env')" :active="request()->routeIs('dashboard')">
+                {{ __('පාරිසරික තොරතුරු') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Question 2') }}
