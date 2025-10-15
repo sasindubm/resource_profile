@@ -25,4 +25,8 @@ Route::get('/env', function () {
     return view('EnvironmentalInformation');
 })->name('env');
 
+Route::get('/edu', function () {
+    return view('EducationPage');
+})->name('edu');
+
 require __DIR__.'/auth.php';
