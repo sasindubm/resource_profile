@@ -1,8 +1,25 @@
+@php
+    $navLinks = [
+        ['route' => 'dashboard', 'label' => 'මුල් පිටුව'],
+        ['route' => 'basic', 'label' => 'මූලික තොරතුරු'],
+        ['route' => 'env', 'label' => 'පාරිසරික තොරතුරු'],
+        ['route' => 'dashboard', 'label' => 'Question 3'],
+        ['route' => 'dashboard', 'label' => 'Question 4'],
+        ['route' => 'dashboard', 'label' => 'Question 5'],
+        ['route' => 'dashboard', 'label' => 'Question 6'],
+        ['route' => 'dashboard', 'label' => 'Question 7'],
+        ['route' => 'dashboard', 'label' => 'Question 8'],
+        ['route' => 'dashboard', 'label' => 'Question 9'],
+        ['route' => 'dashboard', 'label' => 'Question 10'],
+        ['route' => 'dashboard', 'label' => 'Question 11'],
+        ['route' => 'dashboard', 'label' => 'Question 12'],
+    ];
+@endphp
+
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
-    <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
-            <div class="flex">
+            <div class="flex font-bold">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
@@ -10,11 +27,13 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+                <!-- Desktop Navigation Links -->
+                <div class="hidden sm:flex space-x-8 sm:ms-10">
+                    @foreach($navLinks as $link)
+                        <x-nav-link :href="route($link['route'])" :active="request()->routeIs($link['route'])">
+                            {{ __($link['label']) }}
+                        </x-nav-link>
+                    @endforeach
                 </div>
             </div>
 
@@ -64,12 +83,14 @@
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
+    <!-- Mobile Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
+            @foreach($navLinks as $link)
+                <x-responsive-nav-link :href="route($link['route'])" :active="request()->routeIs($link['route'])">
+                    {{ __($link['label']) }}
+                </x-responsive-nav-link>
+            @endforeach
         </div>
 
         <!-- Responsive Settings Options -->
@@ -98,3 +119,4 @@
         </div>
     </div>
 </nav>
+

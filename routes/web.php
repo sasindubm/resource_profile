@@ -16,7 +16,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/waterform', function () {
-    return view('waterform');
-});
+
+Route::get('/basic', function () {
+    return view('basic_information_page');
+})->name('basic');
+
+Route::get('/env', function () {
+    return view('EnvironmentalInformation');
+})->name('env');
+
 require __DIR__.'/auth.php';
