@@ -1,5 +1,22 @@
+@php
+    $navLinks = [
+        ['route' => 'dashboard', 'label' => 'මුල් පිටුව'],
+        ['route' => 'basic', 'label' => 'මූලික තොරතුරු'],
+        ['route' => 'env', 'label' => 'පාරිසරික තොරතුරු'],
+        ['route' => 'edu', 'label' => 'අධ්‍යාපන තොරතුරු'],
+        ['route' => 'dashboard', 'label' => 'Question 4'],
+        ['route' => 'dashboard', 'label' => 'Question 5'],
+        ['route' => 'dashboard', 'label' => 'Question 6'],
+        ['route' => 'dashboard', 'label' => 'Question 7'],
+        ['route' => 'dashboard', 'label' => 'Question 8'],
+        ['route' => 'dashboard', 'label' => 'Question 9'],
+        ['route' => 'dashboard', 'label' => 'Question 10'],
+        ['route' => 'dashboard', 'label' => 'Question 11'],
+        ['route' => 'dashboard', 'label' => 'Question 12'],
+    ];
+@endphp
+
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
-    <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex font-bold">
@@ -10,71 +27,13 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('මුල් පිටුව') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('basic')">
-                        {{ __('මූලික තොරතුරු') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('env')">
-                        {{ __('පාරිසරික තොරතුරු') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('edu')">
-                        {{ __('අධ්‍යාපන තොරතුරු') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 4') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 5') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 6') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 7') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 8') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 9') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 10') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 11') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')">
-                        {{ __('Question 12') }}
-                    </x-nav-link>
+                <!-- Desktop Navigation Links -->
+                <div class="hidden sm:flex space-x-8 sm:ms-10">
+                    @foreach($navLinks as $link)
+                        <x-nav-link :href="route($link['route'])" :active="request()->routeIs($link['route'])">
+                            {{ __($link['label']) }}
+                        </x-nav-link>
+                    @endforeach
                 </div>
             </div>
 
@@ -124,45 +83,14 @@
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
+    <!-- Mobile Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('මුල් පිටුව') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('basic')" :active="request()->routeIs('dashboard')">
-                {{ __('මූලික තොරතුරු') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('env')" :active="request()->routeIs('dashboard')">
-                {{ __('පාරිසරික තොරතුරු') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Question 2') }}
-            </x-responsive-nav-link>
+            @foreach($navLinks as $link)
+                <x-responsive-nav-link :href="route($link['route'])" :active="request()->routeIs($link['route'])">
+                    {{ __($link['label']) }}
+                </x-responsive-nav-link>
+            @endforeach
         </div>
 
         <!-- Responsive Settings Options -->
@@ -191,3 +119,4 @@
         </div>
     </div>
 </nav>
+

@@ -15,7 +15,7 @@
                             <div class="space-y-4 sm:hidden">
                                 <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md p-4">
                                     <h2 class="font-bold text-lg mb-2">මූලික තොරතුරු</h2>
-                                    <div class="space-y-1 text-sm">
+                                    <div class="space-y-1 text-md">
                                         <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span> 176B</div>
                                         <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ නම: </span>කොට්ටව බටහිර</div>
                                         <div><span class="font-semibold">දිස්ත්‍රික්කය:</span> Sample District</div>
