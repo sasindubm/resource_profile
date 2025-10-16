@@ -25,7 +25,6 @@ Route::get('/env', function () {
     return view('EnvironmentalInformation');
 })->name('env');
 
-<<<<<<< HEAD
 Route::get('/pop', function () {
     return view('populationInformation');
 })->name('pop');
@@ -37,10 +36,9 @@ Route::get('/hou', function () {
 Route::get('/hea', function () {
     return view('healthInformation');
 })->name('hea');
-=======
+
 Route::get('/infras', function () {
     return view('InfrastructurePage');
 })->name('infras');
->>>>>>> abe42897d4445c320195d248ed875e68e084d88d
 
 require __DIR__.'/auth.php';
