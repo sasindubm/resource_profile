@@ -11,7 +11,7 @@
         ['route' => 'dashboard', 'label' => 'Question 7'],
         ['route' => 'hea', 'label' => 'සෞඛ්‍ය තොරතුරු'],
         ['route' => 'dashboard', 'label' => 'Question 9'],
-        ['route' => 'dashboard', 'label' => 'Question 10'],
+        ['route' => 'infras', 'label' => 'යටිතල පහසුකම්'],
         ['route' => 'dashboard', 'label' => 'Question 11'],
         ['route' => 'dashboard', 'label' => 'Question 12'],
     ];

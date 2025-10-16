@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\GramaNiladariDivision;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        GramaNiladariDivision::insert([
+            ['gnd_code' => 'GND001', 'gnd_name' => 'Division One'],
+            ['gnd_code' => 'GND002', 'gnd_name' => 'Division Two'],
+            ['gnd_code' => 'GND003', 'gnd_name' => 'Division Three'],
         ]);
     }
 }
