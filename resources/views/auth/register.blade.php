@@ -5,8 +5,10 @@
         <!-- GND Code -->
         <div>
             <x-input-label for="gnd_code" :value="__('GND Code')" />
-            <select name="gnd_code" id="gnd_code" class="block mt-1 w-full border rounded-lg border-gray-300">
-                <option value="">-- Select GND Code --</option>
+            <select name="gnd_code" id="gnd_code" class="block mt-1 w-full border rounded-lg border-gray-300" required>
+                @foreach(\App\Models\GramaNiladariDivision::all() as $gnd)
+                <option value="{{ $gnd->gnd_code }}">{{ $gnd->gnd_name }} ({{ $gnd->gnd_code }})</option>
+                @endforeach
             </select>
             <x-input-error :messages="$errors->get('gnd_code')" class="mt-2" />
 

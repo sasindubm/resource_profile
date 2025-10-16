@@ -16,7 +16,7 @@
                                 <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md p-4">
                                     <h2 class="font-bold text-lg mb-2">මූලික තොරතුරු</h2>
                                     <div class="space-y-1 text-md">
-                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span> 176B</div>
+                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span>{{ Auth::user()->gnd_code }}</div>
                                         <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ නම: </span>කොට්ටව බටහිර</div>
                                         <div><span class="font-semibold">දිස්ත්‍රික්කය:</span> Sample District</div>
                                         <div><span class="font-semibold">ප්‍රාදේශීය ලේකම් කොට්ඨාශය: </span> Sample Division</div>
@@ -48,7 +48,7 @@
                                     </thead>
                                     <tbody>
                                         <tr class="text-center">
-                                            <td class="px-4 py-2 border">176B</td>
+                                            <td class="px-4 py-2 border">{{ Auth::user()->gnd_code }}</td>
                                             <td class="px-4 py-2 border">කොට්ටව බටහිර</td>
                                             <td class="px-4 py-2 border">ගාල්ල</td>
                                             <td class="px-4 py-2 border">යක්කලමුල්ල</td>

@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('GramaNiladariDivision', function (Blueprint $table) {
-            $table->id();
+        Schema::create('grama_niladari_divisions', function (Blueprint $table) {
+            $table->string('gnd_code')->primary(); // GNDCode as primary key
+            $table->string('gnd_name');
             $table->timestamps();
         });
     }
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('GramaNiladariDivision');
+        Schema::dropIfExists('grama_niladari_divisions');
     }
 };
