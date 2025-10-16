@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'occupation',
         'password',
     ];
 
@@ -44,5 +45,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function gnd()
+    {
+        return $this->belongsTo(GramaNiladariDivision::class, 'gnd_code', 'gnd_code');
     }
 }
