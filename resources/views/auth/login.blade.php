@@ -5,15 +5,6 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <!-- GNDCode -->
-        <div>
-            <x-input-label for="gndcode" :value="__('GNDCode')" />
-            <select name="gndcode" id="gndcode" class="block border rounded-lg border-gray-200">
-                <option value=""></option>
-            </select>
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
-
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />

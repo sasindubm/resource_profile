@@ -35,3 +35,20 @@ Route::get('/reg', function () {
 
 
 require __DIR__ . '/auth.php';
+Route::get('/pop', function () {
+    return view('populationInformation');
+})->name('pop');
+
+Route::get('/hou', function () {
+    return view('houseInformation');
+})->name('hou');
+
+Route::get('/hea', function () {
+    return view('healthInformation');
+})->name('hea');
+
+Route::get('/infras', function () {
+    return view('InfrastructurePage');
+})->name('infras');
+
+require __DIR__.'/auth.php';
