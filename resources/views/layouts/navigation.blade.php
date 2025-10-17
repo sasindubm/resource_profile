@@ -7,7 +7,7 @@
         ['route' => 'dashboard', 'label' => 'Question 4'],
         ['route' => 'dashboard', 'label' => 'Question 5'],
         ['route' => 'dashboard', 'label' => 'Question 6'],
-        ['route' => 'dashboard', 'label' => 'Question 7'],
+        ['route' => 'reg', 'label' => 'ආගමික හා සංස්කෘතික කටයුතු'],
         ['route' => 'dashboard', 'label' => 'Question 8'],
         ['route' => 'dashboard', 'label' => 'Question 9'],
         ['route' => 'dashboard', 'label' => 'Question 10'],

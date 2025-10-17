@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/basic', function () {
-    return view('basic_information_page');
+    return view('BasicInformationPage');
 })->name('basic');
 
 Route::get('/env', function () {
@@ -29,4 +29,9 @@ Route::get('/edu', function () {
     return view('EducationPage');
 })->name('edu');
 
-require __DIR__.'/auth.php';
+Route::get('/reg', function () {
+    return view('ReligionInformation');
+})->name('reg');
+
+
+require __DIR__ . '/auth.php';
