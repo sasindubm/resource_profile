@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('grama_niladari_divisions', function (Blueprint $table) {
             $table->string('gnd_code')->primary(); // GNDCode as primary key
             $table->string('gnd_name');
-            $table->timestamps();
+            $table->string('ds_code');
+            $table->foreign('ds_code')->references('ds_code')->on('divisional_secretariats');
         });
     }
 

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('occupation');
             $table->string('password');
             $table->rememberToken();
-            $table->string('gnd_code'); // enforce one user per GND
+            $table->string('gnd_code');
             $table->foreign('gnd_code')->references('gnd_code')->on('grama_niladari_divisions')->onDelete('cascade');
             $table->timestamps();
         });

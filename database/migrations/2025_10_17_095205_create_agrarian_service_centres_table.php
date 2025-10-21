@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('agrarian_service_centres', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
         });
     }
 

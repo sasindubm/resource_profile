@@ -14,6 +14,11 @@ class GramaNiladariDivision extends Model
 
     public function user()
     {
-        return $this->hasOne(User::class, 'gnd_code', 'gnd_code');
+        return $this->hasMany(User::class, 'gnd_code', 'gnd_code');
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(DivisionalSecretariat::class, 'ds_code', 'ds_code');
     }
 }

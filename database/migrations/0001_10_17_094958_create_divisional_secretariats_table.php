@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('districts', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('divisional_secretariats', function (Blueprint $table) {
+            $table->string('ds_code')->primary();
+            $table->string('ds_name');
+            $table->string('d_code');
+            $table->foreign('d_code')->references('d_code')->on('districts')->onDelete('cascade');
         });
     }
 
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('districts');
+        Schema::dropIfExists('divisional_secretariats');
     }
 };

@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('mahaweli_divisions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
         });
     }
 

@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('local_government_divisions', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('lgd_code')->primary();
+            $table->string('lgd_name');
         });
     }
 
