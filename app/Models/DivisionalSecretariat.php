@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class DivisionalSecretariat extends Model
 {
     protected $fillable = [
+        'ds_id',
         'ds_code',
         'ds_name',
     ];

@@ -33,14 +33,14 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'gnd_code' => ['required', 'string', 'max:255'],
+            'gnd_uid' => ['required', 'string', 'max:255'],
             'occupation' => ['nullable', 'string', 'max:255'],
         ]);
 
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->gnd_code = $request->gnd_code;
+        $user->gnd_uid = $request->gnd_uid;
         $user->occupation = $request->occupation;
         $user->password = Hash::make($request->password);
         $user->save();

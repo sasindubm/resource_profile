@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+require __DIR__.'/api.php';
+require __DIR__ . '/auth.php';
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,8 +37,6 @@ Route::get('/reg', function () {
     return view('ReligionInformation');
 })->name('reg');
 
-
-require __DIR__ . '/auth.php';
 Route::get('/pop', function () {
     return view('populationInformation');
 })->name('pop');
@@ -50,5 +52,3 @@ Route::get('/hea', function () {
 Route::get('/infras', function () {
     return view('InfrastructurePage');
 })->name('infras');
-
-require __DIR__.'/auth.php';

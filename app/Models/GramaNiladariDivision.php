@@ -6,19 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class GramaNiladariDivision extends Model
 {
-    protected $primaryKey = 'gnd_code';
-    public $incrementing = false;
-    protected $keyType = 'string';
-
-    protected $fillable = ['gnd_code', 'gnd_name'];
+    protected $fillable = ['gnd_uid','gnd_code','gnd_number', 'gnd_name'];
 
     public function user()
     {
-        return $this->hasMany(User::class, 'gnd_code', 'gnd_code');
+        return $this->hasMany(User::class, 'gnd_uid', 'gnd_uid');
     }
 
-    public function district()
+    public function divisionalSecretariat()
     {
-        return $this->belongsTo(DivisionalSecretariat::class, 'ds_code', 'ds_code');
+        return $this->belongsTo(DivisionalSecretariat::class, 'ds_id', 'ds_id');
     }
 }

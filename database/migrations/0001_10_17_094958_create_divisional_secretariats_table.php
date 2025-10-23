@@ -12,9 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('divisional_secretariats', function (Blueprint $table) {
-            $table->string('ds_code')->primary();
+            $table->string('ds_id')->primary();
+            $table->string('ds_code');
             $table->string('ds_name');
             $table->string('d_code');
+
             $table->foreign('d_code')->references('d_code')->on('districts')->onDelete('cascade');
         });
     }

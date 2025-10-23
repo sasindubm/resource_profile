@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('occupation');
             $table->string('password');
             $table->rememberToken();
-            $table->string('gnd_code');
-            $table->foreign('gnd_code')->references('gnd_code')->on('grama_niladari_divisions')->onDelete('cascade');
+            $table->string('gnd_uid');
+            $table->foreign('gnd_uid')->references('gnd_uid')->on('grama_niladari_divisions')->onDelete('cascade');
             $table->timestamps();
         });
 
@@ -49,8 +49,8 @@ return new class extends Migration
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign(['gnd_code']);
-            $table->dropColumn('gnd_code');
+            $table->dropForeign(['gnd_uid']);
+            $table->dropColumn('gnd_uid');
         });
     }
 };
