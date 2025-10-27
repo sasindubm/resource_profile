@@ -16,10 +16,10 @@
                                 <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md p-4">
                                     <h2 class="font-bold text-lg mb-2">මූලික තොරතුරු</h2>
                                     <div class="space-y-1 text-md">
-                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span>{{ Auth::user()->gnd_code }}</div>
-                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ නම: </span>කොට්ටව බටහිර</div>
-                                        <div><span class="font-semibold">දිස්ත්‍රික්කය:</span> Sample District</div>
-                                        <div><span class="font-semibold">ප්‍රාදේශීය ලේකම් කොට්ඨාශය: </span> Sample Division</div>
+                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span>{{ Auth::user()->gnd_uid }}</div>
+                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ නම: </span><span id="gnd_name"></span></div>
+                                        <div><span class="font-semibold">දිස්ත්‍රික්කය:</span><span id="d_name"></span></div>
+                                        <div><span class="font-semibold">ප්‍රාදේශීය ලේකම් කොට්ඨාශය: </span><span id="ds_name"></span></div>
                                         <div><span class="font-semibold">පළාත් පාලන ආයතනය/බල ප්‍රදේශය: </span> Sample Area</div>
                                         <div><span class="font-semibold">ගොවිජන සේවා මධ්‍යස්ථානය: </span> Sample Center</div>
                                         <div><span class="font-semibold">අධ්‍යාපන කලාපය: </span> Sample Zone</div>
@@ -48,10 +48,10 @@
                                     </thead>
                                     <tbody>
                                         <tr class="text-center">
-                                            <td class="px-4 py-2 border">{{ Auth::user()->gnd_code }}</td>
-                                            <td class="px-4 py-2 border">කොට්ටව බටහිර</td>
-                                            <td class="px-4 py-2 border">ගාල්ල</td>
-                                            <td class="px-4 py-2 border">යක්කලමුල්ල</td>
+                                            <td class="px-4 py-2 border">{{ Auth::user()->gnd_uid }}</td>
+                                            <td class="px-4 py-2 border" id="gnd_named"></td>
+                                            <td class="px-4 py-2 border" id="d_named"></td>
+                                            <td class="px-4 py-2 border" id="ds_named"></td>
                                             <td class="px-4 py-2 border">බද්දේගම</td>
                                             <td class="px-4 py-2 border">යක්කලමුල්ල</td>
                                             <td class="px-4 py-2 border">Sample Zone</td>
@@ -63,7 +63,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br>
+                <p id="gnd_name"></p>
 
                 <!-- Summary Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
@@ -95,4 +96,31 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gndUid = "{{ Auth::user()->gnd_uid }}";
+
+            fetch(`/api/gnd-by-uid/${gndUid}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('gnd_name').innerHTML = data[0].gnd_name;
+                    document.getElementById('gnd_named').innerHTML = data[0].gnd_name;
+                });
+
+            fetch(`/api/ds-by-gnd/${gndUid}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('ds_name').innerHTML = data;
+                    document.getElementById('ds_named').innerHTML = data;
+                });
+
+            fetch(`/api/district-by-gnd/${gndUid}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('d_name').innerHTML = data;
+                    document.getElementById('d_named').innerHTML = data;
+                });
+        });
+    </script>
 </x-app-layout>
+<x-footer />

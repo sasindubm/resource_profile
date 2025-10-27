@@ -49,6 +49,6 @@ class User extends Authenticatable
 
     public function gnd()
     {
-        return $this->belongsTo(GramaNiladariDivision::class, 'gnd_code', 'gnd_code');
+        return $this->belongsTo(GramaNiladariDivision::class, 'gnd_uid', 'gnd_uid');
     }
 }

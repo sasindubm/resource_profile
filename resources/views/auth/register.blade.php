@@ -2,23 +2,39 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <!-- GND Code -->
-        <div>
-            <x-input-label for="gnd_code" :value="__('GND Code')" />
-            <select name="gnd_code" id="gnd_code" class="block mt-1 w-full border rounded-lg border-gray-300" required>
-                @foreach(\App\Models\GramaNiladariDivision::all() as $gnd)
-                <option value="{{ $gnd->gnd_code }}">{{ $gnd->gnd_name }} ({{ $gnd->gnd_code }})</option>
+        <!-- District -->
+        <div class="mb-5">
+            <x-input-label for="d_code" :value="__('District')" />
+            <select name="d_code" id="d_code" class="block mt-1 w-full border rounded-lg border-gray-300" required>
+                <option value="" selected disabled>-- Select District --</option>
+                @foreach(\App\Models\District::all() as $d)
+                <option value="{{ $d->d_code }}">{{ $d->d_name }} ({{ $d->d_code }})</option>
                 @endforeach
             </select>
-            <x-input-error :messages="$errors->get('gnd_code')" class="mt-2" />
+            <x-input-error :messages="$errors->get('d_code')" class="mt-2" />
+        </div>
 
+        <!-- DS -->
+        <div class="mb-5">
+            <x-input-label for="ds_id" :value="__('Divisional Secretariat')" />
+            <select name="ds_id" id="ds_id" class="block mt-1 w-full border rounded-lg border-gray-300" required>
+                <option value="" selected disabled>-- Select Divisional Secretariat --</option>
+            </select>
+        </div>
+
+        <!-- GND -->
+        <div class="mb-5">
+            <x-input-label for="gnd_uid" :value="__('Grama Niladari Division')" />
+            <select name="gnd_uid" id="gnd_uid" class="block mt-1 w-full border rounded-lg border-gray-300" required>
+                <option value="" selected disabled>-- Select Grama Niladari Division --</option>
+            </select>
         </div>
 
         <!-- Occupation -->
         <div class="mt-4">
             <x-input-label for="occupation" :value="__('Occupation')" />
             <select name="occupation" id="occupation" class="block mt-1 w-full border rounded-lg border-gray-300">
-                <option value="">-- Select Occupation --</option>
+                <option value="" selected disabled>-- Select Occupation --</option>
                 <option value="do" {{ old('occupation') == 'do' ? 'selected' : '' }}>Development Officer</option>
                 <option value="gno" {{ old('occupation') == 'gno' ? 'selected' : '' }}>Grama Niladhari Officer</option>
             </select>
@@ -34,7 +50,7 @@
 
         <!-- Officer Telephone -->
         <div class="mt-4">
-            <x-input-label for="officer_tele" :value="__('Telephone Number')" />
+            <x-input-label for="officer_tele" :value="__('Telephone uid')" />
             <x-text-input id="officer_tele" name="officer_tele" type="text" class="block mt-1 w-full" :value="old('officer_tele')" required />
             <x-input-error :messages="$errors->get('officer_tele')" class="mt-2" />
         </div>
@@ -71,4 +87,31 @@
             </x-primary-button>
         </div>
     </form>
+
+    <script>
+        document.getElementById('d_code').addEventListener('change', function() {
+            fetch(`/api/ds-by-district/${this.value}`)
+                .then(res => res.json())
+                .then(data => {
+                    const dsSelect = document.getElementById('ds_id');
+                    dsSelect.innerHTML = '<option value="" disabled selected>-- Select Divisional Secretariat --</option>';
+                    data.forEach(ds => {
+                        dsSelect.innerHTML += `<option value="${ds.ds_id}">${ds.ds_name} (${ds.ds_id})</option>`;
+                    });
+                });
+        });
+
+        document.getElementById('ds_id').addEventListener('change', function() {
+            fetch(`/api/gnd-by-ds/${this.value}`)
+                .then(res => res.json())
+                .then(data => {
+                    const gndSelect = document.getElementById('gnd_uid');
+                    gndSelect.innerHTML = '<option value="" disabled selected>-- Select Grama Niladari Division --</option>';
+                    data.forEach(gnd => {
+                        gndSelect.innerHTML += `<option value="${gnd.gnd_uid}">${gnd.gnd_name} (${gnd.gnd_uid})</option>`;
+                    });
+                });
+        });
+    </script>
+
 </x-guest-layout>
