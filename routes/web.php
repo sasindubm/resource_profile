@@ -51,4 +51,8 @@ Route::get('/infras', function () {
     return view('InfrastructurePage');
 })->name('infras');
 
+Route::get('/eco', function () {
+    return view('EconomicActivity');
+})->name('eco');
+
 require __DIR__.'/auth.php';
