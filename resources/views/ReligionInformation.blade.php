@@ -241,30 +241,3 @@
 
 </x-app-layout>
 <x-footer />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-    </div>
-</x-app-layout>
