@@ -2,17 +2,18 @@
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">6.1 අධ්‍යාපනය ආයතන ව්‍යාප්තිය-2025</h2>
+                <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">1 අධ්‍යාපන ආයතන ව්‍යාප්තිය</h2>
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <table class="shadow-md border rounded-lg w-full">
-                        <thead>
+                        <thead class="bg-gray-200">
                             <tr>
                                 <th class="px-4 py-2 border"> </th>
-                                <th class="px-4 py-2 border">අධ්‍යාපනය ආයතන සංඛාව</th>
-                                <th class="px-4 py-2 border">ආයතන සංඛාව</th>
+                                <th class="px-4 py-2 border">අධ්‍යාපන ආයතන සංඛ්‍යාව</th>
+                                <th class="px-4 py-2 border">ආයතන සංඛ්‍යාව</th>
                             </tr>
-
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td class="px-4 py-2 border">1</td>
                                 <td class="px-4 py-2 border">පාසල් (රජයේ)</td>
@@ -57,11 +58,9 @@
                             </tr>
                             <tr>
                                 <td class="px-4 py-2 border">9 </td>
-                                <td class="px-4 py-2 border">උපකාරක පන්ති පාත්වන ආයතන</td>
+                                <td class="px-4 py-2 border">උපකාරක පන්ති පවත්වන ආයතන</td>
                                 <td class="px-4 py-2 border"> </td>
                             </tr>
-                        </thead>
-                        <tbody id="waterSourceTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -71,8 +70,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">6.1.2 පාසල් සංඛාව-2025</h2>
-                    <div>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">2 පාසල් සංඛ්‍යාව</h2>
+                    <div class="shadow-md border rounded-lg w-full p-4 mb-6">
                         <div>
                             <label for="school_name"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාසලේ නම:</label>
@@ -119,6 +118,7 @@
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ජල
                                 පහසුකම්:</label>
                             <label> <input type="radio" name="color" value="blue"> ඇත </label>
+                            &nbsp;
                             <label> <input type="radio" name="color" value="blue"> නැත </label>
                         </div><br>
 
@@ -126,7 +126,9 @@
                             <label for="source_type"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">වැසිකිලි
                                 පහසුකම්:</label>
+
                             <label> <input type="radio" name="color" value="blue"> ඇත </label>
+                            &nbsp;
                             <label> <input type="radio" name="color" value="blue"> නැත </label>
                         </div><br>
 
@@ -159,8 +161,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">6.1.3 පසුගිය වසර පහ ඇතුලත වැසිගිය
-                        පාසල් පිලිබද තොරතුරු-2025</h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">3 පසුගිය වසර පහ ඇතුලත වැසීගිය
+                        පාසල් පිලිබඳ තොරතුරු</h2>
                     <div>
                         <div>
 
@@ -185,7 +187,7 @@
 
                                 <div>
                                     <label for="source_type"
-                                        class="block font-medium text-sm text-gray-700 dark:text-gray-300">වැසිගිය
+                                        class="block font-medium text-sm text-gray-700 dark:text-gray-300">වැසීගිය
                                         වර්ශය:</label>
                                     <input type="text" id="source_name" name="source_name" required
                                         class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
@@ -194,7 +196,7 @@
                                 <div>
                                     <label for="source_type"
                                         class="block font-medium text-sm text-gray-700 dark:text-gray-300">පවතින
-                                        ගොඩනැගිලි සංඛාව:</label>
+                                        ගොඩනැගිලි සංඛ්‍යාව:</label>
                                     <input type="text" id="source_name" name="source_name" required
                                         class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 </div><br>
@@ -216,7 +218,7 @@
                                 <th class="px-4 py-2 border"> අනු අංකය </th>
                                 <th class="px-4 py-2 border"> පාසලේ නම </th>
                                 <th class="px-4 py-2 border"> වැසිගිය වර්ශය </th>
-                                <th class="px-4 py-2 border"> පවතින ගොඩන ගිලි සංඛාව</th>
+                                <th class="px-4 py-2 border"> පවතින ගොඩනැගිලි සංඛ්‍යාව</th>
 
                             </tr>
                         </thead>
@@ -233,9 +235,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">6.2. පුද්ගලික පාසල් /
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">පුද්ගලික පාසල් /
                         ජාත්‍යන්තර
-                        පසල්-2025</h2>
+                        පාසල්-2025</h2>
                     <div>
                         <div>
 
@@ -306,7 +308,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> පිරිවෙන් පිලිබද තොරතුරු </h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> පිරිවෙන් පිලිබඳ තොරතුරු </h2>
                     <div>
                         <div>
                             <div>
@@ -390,7 +392,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> කාර්මික හා වෘත්තීය පුහුණු ආයතන පිළිබද
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> කාර්මික හා වෘත්තීය පුහුණු ආයතන පිළිබඳ
                         තොරතුරු </h2>
                     <div>
                         <div>
@@ -439,7 +441,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> පෙර පාසල් පිලිබද තොරතුරු </h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> පෙර පාසල් පිලිබඳ තොරතුරු </h2>
                     <div>
                         <div>
 
@@ -507,7 +509,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> දහම් පාසල් පිලිබද තොරතුරු </h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> දහම් පාසල් පිලිබඳ තොරතුරු </h2>
                     <div>
                         <div>
 
@@ -587,7 +589,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> උපකාරක පන්ති පවත්වන ආයතන පිලිබද තොරතුරු
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> උපකාරක පන්ති පවත්වන ආයතන පිලිබඳ තොරතුරු
                     </h2>
                     <div>
                         <div>

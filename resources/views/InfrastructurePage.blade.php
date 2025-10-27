@@ -4,10 +4,9 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h1 class="text-xl font-semibold mb-4 dark:text-gray-200"> යටිතල පහසුකම් <b />2025</b></h1>
-                    <h6 class="text-xl font-semibold mb-4 dark:text-gray-100  font-medium text-sm text-gray-700">10.1 යටිතල පහසුකම් </b>2025</b></h6>
-                    <B></B><label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300"> 1 අබලන් තත්වයේ පවතින මාර් ග පිළිබද විස්තරය(ප්‍රමුඛතාවය අනුව) - 2025
-                        :</label></B>
+                    <h1 class="text-xl font-semibold mb-4 dark:text-gray-200"> යටිතල පහසුකම් </h1>
+
+                   <h1 class="text-xl font-semibold mb-4 dark:text-gray-200"> 1 අබලන් තත්වයේ පවතින මාර්ග පිළිබඳ විස්තර (ප්‍රමුඛතාවය අනුව) </h1>
                     <form id="waterSourceForm" class="space-y-4">
                         @csrf
 
@@ -15,7 +14,7 @@
                             <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු අංකය:</label>
                             <input type="text" id="source_name" name="source_name" required
                                 class="mt-2 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">මාර්_ගය(m):</label>
+                            <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">මාර්ගය:</label>
                             <input type="text" id="source_name" name="source_name" required
                                 class="mt-2 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
 
@@ -39,7 +38,7 @@
                                 <label for="road">බොරලු</label><br>
                                 <input type="radio" id="පස්" name="road" value="පස්">
                                 <label for="road">පස්</label><br>
-                                <input type="submit" value="Submit">
+
                             </form>
                         </div>
 
@@ -57,10 +56,10 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border">මාර්_ග අංකය</th>
-                                <th class="px-4 py-2 border">මාර්්ගය</th>
+                                <th class="px-4 py-2 border">මාර්ග අංකය</th>
+                                <th class="px-4 py-2 border">මාර්ගය</th>
                                 <th class="px-4 py-2 border">දිග ප්‍රමාණය(m)</th>
-                                <th class="px-4 py-2 border">මාර්්ගයේ ස්වභාවය</th>
+                                <th class="px-4 py-2 border">මාර්ගයේ ස්වභාවය</th>
                                 <th class="px-4 py-2 border">නඩත්තු කරනු ලබන ආයතනය</th>
 
                             </tr>
