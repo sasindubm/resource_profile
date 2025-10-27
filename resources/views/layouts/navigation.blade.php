@@ -9,7 +9,7 @@
         ['route' => 'edu', 'label' => 'අධ්‍යාපන තොරතුරු'],
         ['route' => 'reg', 'label' => 'ආගමික හා සංස්කෘතික කටයුතු'],
         ['route' => 'hea', 'label' => 'සෞඛ්‍ය තොරතුරු'],
-        ['route' => 'dashboard', 'label' => 'Question 9'],
+        ['route' => 'eco', 'label' => 'ආර්ථික කටයුතු'],
         ['route' => 'infras', 'label' => 'යටිතල පහසුකම්'],
         ['route' => 'dashboard', 'label' => 'Question 11'],
         ['route' => 'dashboard', 'label' => 'Question 12'],
