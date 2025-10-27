@@ -17,14 +17,18 @@ class BasicInfoController extends Controller
 
     public function getDSNameByGND($gnd_uid)
     {
-        $ds = GramaNiladariDivision::where('gnd_uid', $gnd_uid)->get('ds_id');
-        return DivisionalSecretariat::where('ds_id', $ds)->get('ds_name');
+        $ds_id = GramaNiladariDivision::where('gnd_uid', $gnd_uid)->value('ds_id');
+        $ds_name = DivisionalSecretariat::where('ds_id', $ds_id)->value('ds_name');
+
+        return response()->json(['ds_name' => $ds_name]);
     }
 
     public function getDistrictNameByGND($gnd_uid)
     {
-        $ds = GramaNiladariDivision::where('gnd_uid', $gnd_uid)->get('ds_id');
-        $district = DivisionalSecretariat::where('ds_id', $ds)->get('d_code');
-        return District::where('d_code', $district)->get('d_name');
+        $ds_id = GramaNiladariDivision::where('gnd_uid', $gnd_uid)->value('ds_id');
+        $d_code = DivisionalSecretariat::where('ds_id', $ds_id)->value('d_code');
+        $d_name = District::where('d_code', $d_code)->value('d_name');
+
+        return response()->json(['d_name' => $d_name]);
     }
 }

@@ -110,15 +110,15 @@
             fetch(`/api/ds-by-gnd/${gndUid}`)
                 .then(res => res.json())
                 .then(data => {
-                    document.getElementById('ds_name').innerHTML = data;
-                    document.getElementById('ds_named').innerHTML = data;
+                    document.getElementById('ds_name').innerHTML = data['ds_name'];
+                    document.getElementById('ds_named').innerHTML = data['ds_name'];
                 });
 
             fetch(`/api/district-by-gnd/${gndUid}`)
                 .then(res => res.json())
                 .then(data => {
-                    document.getElementById('d_name').innerHTML = data;
-                    document.getElementById('d_named').innerHTML = data;
+                    document.getElementById('d_name').innerHTML = data['d_name'];
+                    document.getElementById('d_named').innerHTML = data['d_name'];
                 });
         });
     </script>
