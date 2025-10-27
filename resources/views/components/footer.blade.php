@@ -4,7 +4,7 @@
       &copy; {{ date('Y') }} <span class="font-semibold">Resource Profile</span>. All rights reserved.
     </p>
     <p class="text-sm text-gray-600 dark:text-gray-400">
-      Developed by <span class="font-medium">IT Trainee Team</span> — Planning Secretariat, Southern Province
+      Developed by <span class="font-medium">IT Trainee Team</span> — Planning Secretariat - Southern Province
     </p>
     <p class="text-sm text-gray-600 dark:text-gray-400">
       Contact Developers:
