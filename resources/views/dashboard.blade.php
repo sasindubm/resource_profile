@@ -1,6 +1,8 @@
 <x-app-layout>
+    @vite('resources/js/pages/dashboard_con.js')
+
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <!-- Greeting -->
                 <div class="p-6 text-gray-900 dark:text-gray-100 font-bold text-lg">
@@ -96,38 +98,5 @@
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const gndUid = "{{ Auth::user()->gnd_uid }}";
-
-            fetch(`/api/gnd-by-uid/${gndUid}`)
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('gnd_name').innerHTML = data[0].gnd_name;
-                    document.getElementById('gnd_named').innerHTML = data[0].gnd_name;
-                });
-
-            fetch(`/api/gnd-number-by-uid/${gndUid}`)
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('gnd_number').innerHTML = data['gnd_number'];
-                    document.getElementById('gnd_numberd').innerHTML = data['gnd_number'];
-                });
-
-            fetch(`/api/ds-by-gnd/${gndUid}`)
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('ds_name').innerHTML = data['ds_name'];
-                    document.getElementById('ds_named').innerHTML = data['ds_name'];
-                });
-
-            fetch(`/api/district-by-gnd/${gndUid}`)
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('d_name').innerHTML = data['d_name'];
-                    document.getElementById('d_named').innerHTML = data['d_name'];
-                });
-        });
-    </script>
 </x-app-layout>
 <x-footer />

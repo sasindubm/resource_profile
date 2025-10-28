@@ -1,6 +1,7 @@
 <x-app-layout>
+    @vite('resources/js/pages/basicinfo_con.js')
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-8">
@@ -40,6 +41,7 @@
                         <table class="shadow-md border rounded-lg w-full min-w-[400px]">
                             <thead>
                                 <tr>
+                                    <th class="px-6 py-6 border"></th>
                                     <th class="px-6 py-3 border">අනු අංකය</th>
                                     <th class="px-6 py-3 border">ආයතනයේ නම</th>
                                     <th class="px-6 py-3 border">ආයතන වර්ගය</th>
@@ -53,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-8">
@@ -109,7 +111,7 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-8">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-8">
@@ -152,57 +154,5 @@
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const gndUid = "{{ Auth::user()->gnd_uid }}";
-
-            function fetchGovFigures() {
-                fetch(`/api/get-gf/${gndUid}`)
-                    .then(res => res.json())
-                    .then(data => {
-                        let govFigBody = '';
-                        data.forEach((item, index) => {
-                            govFigBody += `
-                                <tr>
-                                    <td class="px-6 py-4 border text-center">${index + 1}</td>
-                                    <td class="px-6 py-4 border text-center">${item.gf_name}</td>
-                                    <td class="px-6 py-4 border text-center">${item.gf_type}</td>
-                                    <td class="px-6 py-4 border text-center">${item.gf_address}</td>
-                                </tr>
-                            `;
-                        });
-                        document.getElementById('govFigTable').innerHTML = govFigBody;
-                    })
-                    .catch(error => console.error('Error fetching data:', error));
-            }
-
-            fetchGovFigures();
-
-            document.getElementById('govFig').addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const formData = new FormData();
-                formData.append('gf_name', document.getElementById('gf_name').value);
-                formData.append('gf_type', document.getElementById('gf_type').value);
-                formData.append('gf_address', document.getElementById('gf_address').value);
-                formData.append('gnd_uid', gndUid);
-
-                fetch(`/api/insert-gf/${gndUid}`, {
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-                        },
-                        body: formData
-                    })
-                    .then(res => res.json())
-                    .then(data => {
-                        alert('Government Figure inserted successfully!');
-                        this.reset();
-                        fetchGovFigures();
-                    })
-                    .catch(error => console.error('Error submitting form:', error));
-            });
-        });
-    </script>
 </x-app-layout>
 <x-footer />
