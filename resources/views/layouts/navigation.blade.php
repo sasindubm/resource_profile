@@ -11,8 +11,9 @@
         ['route' => 'hea', 'label' => 'සෞඛ්‍ය තොරතුරු'],
         ['route' => 'eco', 'label' => 'ආර්ථික කටයුතු'],
         ['route' => 'infras', 'label' => 'යටිතල පහසුකම්'],
-        ['route' => 'dashboard', 'label' => 'Question 11'],
-        ['route' => 'dashboard', 'label' => 'Question 12'],
+        ['route' => 'soc', 'label' => 'සමාජ සුභසාධන'],
+        ['route' => 'com', 'label' => 'ප්‍රජාමූල තොරතුරු'],
+        ['route' => 'dashboard', 'label' => 'Question 13'],
     ];
 @endphp
 

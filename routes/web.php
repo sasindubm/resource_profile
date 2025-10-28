@@ -57,4 +57,12 @@ Route::get('/eco', function () {
     return view('EconomicActivity');
 })->name('eco');
 
+Route::get('/com', function () {
+    return view('CommunityInformation');
+})->name('com');
+
+Route::get('/soc', function () {
+    return view('SocialWelfare');
+})->name('soc');
+
 require __DIR__.'/auth.php';
