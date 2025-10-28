@@ -5,31 +5,34 @@
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-8">
                     <h2 class="text-xl font-semibold mb-6 dark:text-gray-200">1.රාජ්‍ය ආයතන පිළිබඳ තොරතුරු</h2>
-                    <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
+                    <form id="govFig" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
                         @csrf
                         <div class="mb-6">
                             <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">ආයතනයේ නම:</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="gf_name" name="gf_name" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
                         </div>
                         <div class="mb-6">
                             <label for="source_type" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">වර්ගය:</label>
-                            <select id="source_type" name="source_type" required
+                            <select id="gf_type" name="gf_type" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
                                 <option value="" disabled selected>ආයතන වර්ගයක් තෝරන්න</option>
+                                <option value="ප්‍රාදේශීය සභාව">ප්‍රාදේශීය සභාව</option>
+                                <option value="ප්‍රාදේශීය ලේකම් කාර්‍යාලය">ප්‍රාදේශීය ලේකම් කාර්‍යාලය</option>
                             </select>
                         </div>
                         <div class="mb-6">
                             <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">ලිපිනය:</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="gf_address" name="gf_address" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
                         </div>
                         <div>
-                            <x-primary-button class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
+                            <x-primary-button  class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
                                 {{ __('insert') }}
                             </x-primary-button>
                         </div>
                     </form>
+
                 </div>
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-8">
@@ -39,10 +42,11 @@
                                 <tr>
                                     <th class="px-6 py-3 border">අනු අංකය</th>
                                     <th class="px-6 py-3 border">ආයතනයේ නම</th>
+                                    <th class="px-6 py-3 border">ආයතන වර්ගය</th>
                                     <th class="px-6 py-3 border">ලිපිනය</th>
                                 </tr>
                             </thead>
-                            <tbody id="waterSourceTableBody">
+                            <tbody id="govFigTable">
                             </tbody>
                         </table>
                     </div>
@@ -148,5 +152,57 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gndUid = "{{ Auth::user()->gnd_uid }}";
+
+            function fetchGovFigures() {
+                fetch(`/api/get-gf/${gndUid}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        let govFigBody = '';
+                        data.forEach((item, index) => {
+                            govFigBody += `
+                                <tr>
+                                    <td class="px-6 py-4 border text-center">${index + 1}</td>
+                                    <td class="px-6 py-4 border text-center">${item.gf_name}</td>
+                                    <td class="px-6 py-4 border text-center">${item.gf_type}</td>
+                                    <td class="px-6 py-4 border text-center">${item.gf_address}</td>
+                                </tr>
+                            `;
+                        });
+                        document.getElementById('govFigTable').innerHTML = govFigBody;
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            }
+
+            fetchGovFigures();
+
+            document.getElementById('govFig').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const formData = new FormData();
+                formData.append('gf_name', document.getElementById('gf_name').value);
+                formData.append('gf_type', document.getElementById('gf_type').value);
+                formData.append('gf_address', document.getElementById('gf_address').value);
+                formData.append('gnd_uid', gndUid);
+
+                fetch(`/api/insert-gf/${gndUid}`, {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                        },
+                        body: formData
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        alert('Government Figure inserted successfully!');
+                        this.reset();
+                        fetchGovFigures();
+                    })
+                    .catch(error => console.error('Error submitting form:', error));
+            });
+        });
+    </script>
 </x-app-layout>
 <x-footer />
