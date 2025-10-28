@@ -22,13 +22,19 @@
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900">
-    <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 fixed top-0 bg-gray-100 dark:bg-gray-900 z-10">
+    <header class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 fixed top-0 bg-gray-100 dark:bg-gray-900 z-10 shadow-md">
         @if (Route::has('login'))
         <nav class="flex justify-end space-x-4">
+            <a href="#infoSec" class="px-4 py-2 text-black flex items-center underline hover:text-gray-700 dark:text-gray-300 dark:hover:text-white">
+                <span>Information</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#1f1f1f" class="ml-1">
+                    <path d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z" />
+                </svg>
+            </a>
             @auth
             <a href="{{ url('/dashboard') }}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Dashboard</a>
             @else
-            <a href="{{ route('login') }}" class="px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Log in</a>
+            <a href="{{ route('login') }}" class="px-4 py-2 bg-gray-200 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Log in</a>
             @if (Route::has('register'))
             <a href="{{ route('register') }}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Register</a>
             @endif
@@ -38,7 +44,7 @@
     </header>
 
     <main class="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl w-full space-y-8 text-center">
+        <div class="max-w-8xl w-full space-y-8 text-center bg-gray-200 dark:bg-gray-800 rounded-lg p-8 mt-20 mb-10 shadow-lg">
             <div class="flex justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="417" height="417"
                     viewBox="0 0 417 417">
@@ -68,6 +74,69 @@
                 @endauth
             </div>
         </div>
+        <section id="infoSec">
+            <div class="max-w-8xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">Download Resources</h3>
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- GND List -->
+                        <div class="relative rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-5 shadow-sm hover:border-gray-400 hover:ring-1 hover:ring-gray-400">
+                            <div class="flex items-center justify-between">
+                                <div class="flex-1 truncate">
+                                    <div class="flex items-center space-x-3">
+                                        <h3 class="truncate text-sm font-medium text-gray-900 dark:text-white">GND Division List</h3>
+                                    </div>
+                                    <p class="mt-1 truncate text-sm text-gray-500 dark:text-gray-400">Complete list of Grama Niladhari Divisions</p>
+                                </div>
+                                <a href="#" class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">
+                                    Download
+                                    <svg class="ml-2 -mr-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- District List -->
+                        <div class="relative rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-5 shadow-sm hover:border-gray-400 hover:ring-1 hover:ring-gray-400">
+                            <div class="flex items-center justify-between">
+                                <div class="flex-1 truncate">
+                                    <div class="flex items-center space-x-3">
+                                        <h3 class="truncate text-sm font-medium text-gray-900 dark:text-white">District List</h3>
+                                    </div>
+                                    <p class="mt-1 truncate text-sm text-gray-500 dark:text-gray-400">Complete list of Districts in Sri Lanka</p>
+                                </div>
+                                <a href="#" class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">
+                                    Download
+                                    <svg class="ml-2 -mr-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- DS List -->
+                        <div class="relative rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-5 shadow-sm hover:border-gray-400 hover:ring-1 hover:ring-gray-400">
+                            <div class="flex items-center justify-between">
+                                <div class="flex-1 truncate">
+                                    <div class="flex items-center space-x-3">
+                                        <h3 class="truncate text-sm font-medium text-gray-900 dark:text-white">DS Division List</h3>
+                                    </div>
+                                    <p class="mt-1 truncate text-sm text-gray-500 dark:text-gray-400">Complete list of Divisional Secretariats</p>
+                                </div>
+                                <a href="#" class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">
+                                    Download
+                                    <svg class="ml-2 -mr-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <x-footer />

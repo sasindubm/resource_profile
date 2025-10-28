@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="py-6">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">1 අධ්‍යාපන ආයතන ව්‍යාප්තිය</h2>
 
@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">2 පාසල් සංඛ්‍යාව</h2>
@@ -158,7 +158,7 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">3 පසුගිය වසර පහ ඇතුලත වැසීගිය
@@ -232,7 +232,7 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">පුද්ගලික පාසල් /
@@ -305,7 +305,7 @@
         </div>
 
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> පිරිවෙන් පිලිබඳ තොරතුරු </h2>
@@ -389,7 +389,7 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> කාර්මික හා වෘත්තීය පුහුණු ආයතන පිළිබඳ
@@ -438,7 +438,7 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> පෙර පාසල් පිලිබඳ තොරතුරු </h2>
@@ -506,7 +506,7 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> දහම් පාසල් පිලිබඳ තොරතුරු </h2>
@@ -586,7 +586,7 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> උපකාරක පන්ති පවත්වන ආයතන පිලිබඳ තොරතුරු

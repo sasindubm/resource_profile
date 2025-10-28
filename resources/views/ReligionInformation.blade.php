@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="py-6">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div>
                 <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> ආගමික හා සංස්කෘතික කටයුතු</h2>
                 <div>
@@ -51,7 +51,7 @@
             </div>
 
         </div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
 
@@ -121,7 +121,7 @@
         </div>
 
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> කලායතන පිළිබද විස්තර</h2>
@@ -175,7 +175,7 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> ප්‍රදේශයේ පවතින ප්‍රධාන සංස්කෘතිකාංග-
