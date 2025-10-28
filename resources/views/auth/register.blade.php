@@ -50,7 +50,7 @@
 
         <!-- Officer Telephone -->
         <div class="mt-4">
-            <x-input-label for="officer_tele" :value="__('Telephone uid')" />
+            <x-input-label for="officer_tele" :value="__('Telephone')" />
             <x-text-input id="officer_tele" name="officer_tele" type="text" class="block mt-1 w-full" :value="old('officer_tele')" required />
             <x-input-error :messages="$errors->get('officer_tele')" class="mt-2" />
         </div>
