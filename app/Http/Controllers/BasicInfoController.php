@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class BasicInfoController extends Controller
 {
+    public function getGNDNumber($gnd_uid)
+    {
+        return response()->json(['gnd_number' => GramaNiladariDivision::where('gnd_uid', $gnd_uid)->value('gnd_number')]);
+    }
+
     public function getGNDName($gnd_uid)
     {
         return GramaNiladariDivision::where('gnd_uid', $gnd_uid)->get(['gnd_name']);

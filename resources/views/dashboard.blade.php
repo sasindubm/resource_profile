@@ -16,7 +16,7 @@
                                 <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md p-4">
                                     <h2 class="font-bold text-lg mb-2">මූලික තොරතුරු</h2>
                                     <div class="space-y-1 text-md">
-                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span>{{ Auth::user()->gnd_uid }}</div>
+                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span><span id="gnd_number"></span></div>
                                         <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ නම: </span><span id="gnd_name"></span></div>
                                         <div><span class="font-semibold">දිස්ත්‍රික්කය:</span><span id="d_name"></span></div>
                                         <div><span class="font-semibold">ප්‍රාදේශීය ලේකම් කොට්ඨාශය: </span><span id="ds_name"></span></div>
@@ -48,7 +48,7 @@
                                     </thead>
                                     <tbody>
                                         <tr class="text-center">
-                                            <td class="px-4 py-2 border">{{ Auth::user()->gnd_uid }}</td>
+                                            <td class="px-4 py-2 border" id="gnd_numberd"></td>
                                             <td class="px-4 py-2 border" id="gnd_named"></td>
                                             <td class="px-4 py-2 border" id="d_named"></td>
                                             <td class="px-4 py-2 border" id="ds_named"></td>
@@ -105,6 +105,13 @@
                 .then(data => {
                     document.getElementById('gnd_name').innerHTML = data[0].gnd_name;
                     document.getElementById('gnd_named').innerHTML = data[0].gnd_name;
+                });
+
+            fetch(`/api/gnd-number-by-uid/${gndUid}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('gnd_number').innerHTML = data['gnd_number'];
+                    document.getElementById('gnd_numberd').innerHTML = data['gnd_number'];
                 });
 
             fetch(`/api/ds-by-gnd/${gndUid}`)
