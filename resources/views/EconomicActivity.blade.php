@@ -610,40 +610,547 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">1 වයස් කාණ්ඩ අනුව ජනගහනය </h2>
+                <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> වාණිජ ම‍ට්ටමින් සත්ව පාලනයේ ‍යෙදෙන පවුල්වල තොරතුරු </h2>
 
                 <table class="shadow-md border rounded-lg w-full mb-5" border="1">
                     <tr>
-                        <th></th>
-                        <th class="px-4 py-2 border">අවු.0-04</th>
-                        <th class="px-4 py-2 border">අවු.05-14</th>
-                        <th class="px-4 py-2 border">අවු.15-59</th>
-                        <th class="px-4 py-2 border">අවු.60-80</th>
-                        <th class="px-4 py-2 border">අවු.80 ට වැඩි</th>
-                        <th class="px-4 py-2 border">මුළු ජනගහනය</th>
-                    </tr>
-                    <tr>
-                        <td class="px-4 py-2 border">ස්ත්‍රී</td>
                         
-                        
-                        
-                        
-                        
+                       
+                        <th rowspan="2" class="px-4 py-2 border">නම</th>
+                        <th rowspan="2" class="px-4 py-2 border">ලිපිනය</th>
+                        <th rowspan="2" class="px-4 py-2 border">දුරකථන අංකය</th>
+                        <th colspan="6">සත්වයන් සංඛාව</th>
                         
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border">පුරුෂ</td>
-                        
-                        
-                        
-                        
-                        
-                        
+                        <th class="px-4 py-2 border">ගවයන්</th>
+                        <th class="px-4 py-2 border">එළුවන්</th>
+                        <th class="px-4 py-2 border">කුකුළන්</th>
+                        <th class="px-4 py-2 border">ඌරන් </th>
+                        <th class="px-4 py-2 border"> තාරාවන්</th>
+                        <th class="px-4 py-2 border">වෙනත්</th>
                     </tr>
+
+                    <tr>
+                        <td class="px-4 py-2 border"> </td>
+                        <td class="px-4 py-2 border"> </td>
+                        <td class="px-4 py-2 border"> </td>
+                        <td class="px-4 py-2 border"> </td>
+                        <td class="px-4 py-2 border"> </td>
+                        <td class="px-4 py-2 border"> </td>
+                        <td class="px-4 py-2 border"> </td>
+                        <td class="px-4 py-2 border"> </td>
+                        <td class="px-4 py-2 border"> </td>
+                    </tr>           
                 </table>
                 <x-primary-button>Update</x-primary-button>
             </div>
         </div>
+
+         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">කර්මාන්ත තොරතුරු කොට්ඨාසයේ පවතින කර්මාන්තශාලා </h2>
+                    <div>
+
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> කර්මාන්ත වර්ගය:</label>
+                            <select id="source_type" name="source_type" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                                <option value="" disabled selected>කර්මාන්ත වර්ගයක් තෝරන්න</option>
+                                <option value="ජාතික පාසල් "> ගෘහස්ත කර්මාන්ත ගණන </option>
+                                <option value="1 AB උසස් පෙල විද්‍යා විෂයන් ඇති පාසල්"> සේවක සංඛාව 5 ‍ට අඩු කර්මාන්තශාලා ගණන</option>
+                                <option value="1 C උසස් පෙල කලා/ වාණිජ විෂයන් ඇති පාසල්"> සේවක සංඛාව 5 ට වැඩි කර්මාන්තශාලා ගණන</option>
+                                
+                            </select>
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">කර්මාන්ත ආයතන සංඛාව:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">මුළු කර්මාන්තශාලා ගණන:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> කර්මාන්ත වර්ගය </th>
+                                <th class="px-4 py-2 border"> කර්මාන්ත ආයතන සංඛාව</th>
+                                <th class="px-4 py-2 border"> මුළු කර්මාන්තශාලා ගණන</th>
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">කර්මාන්ත තොරතුරු කොට්ඨාසයේ පවතින කර්මාන්තශාලා </h2>
+                    <div>
+
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> කර්මාන්ත වර්ගය:</label>
+                            <select id="source_type" name="source_type" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                                <option value="" disabled selected>කර්මාන්ත වර්ගයක් තෝරන්න</option>
+                                <option value="ජාතික පාසල් "> ගෘහස්ත කර්මාන්ත ගණන </option>
+                                <option value="1 AB උසස් පෙල විද්‍යා විෂයන් ඇති පාසල්"> සේවක සංඛාව 5 ‍ට අඩු කර්මාන්තශාලා ගණන</option>
+                                <option value="1 C උසස් පෙල කලා/ වාණිජ විෂයන් ඇති පාසල්"> සේවක සංඛාව 5 ට වැඩි කර්මාන්තශාලා ගණන</option>
+                                
+                            </select>
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">කර්මාන්ත ආයතන සංඛාව:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">මුළු කර්මාන්තශාලා ගණන:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> කර්මාන්ත වර්ගය </th>
+                                <th class="px-4 py-2 border"> කර්මාන්ත ආයතන සංඛාව</th>
+                                <th class="px-4 py-2 border"> මුළු කර්මාන්තශාලා ගණන</th>
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">කර්මාන්ත තොරතුරු කොට්ඨාසයේ පවතින කර්මාන්තශාලා </h2>
+                    <div>
+
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> කර්මාන්ත වර්ගය:</label>
+                            <select id="source_type" name="source_type" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                                <option value="" disabled selected>කර්මාන්ත වර්ගයක් තෝරන්න</option>
+                                <option value="ජාතික පාසල් "> ගෘහස්ත කර්මාන්ත ගණන </option>
+                                <option value="1 AB උසස් පෙල විද්‍යා විෂයන් ඇති පාසල්"> සේවක සංඛාව 5 ‍ට අඩු කර්මාන්තශාලා ගණන</option>
+                                <option value="1 C උසස් පෙල කලා/ වාණිජ විෂයන් ඇති පාසල්"> සේවක සංඛාව 5 ට වැඩි කර්මාන්තශාලා ගණන</option>
+                                
+                            </select>
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">කර්මාන්ත ආයතන සංඛාව:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">මුළු කර්මාන්තශාලා ගණන:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> කර්මාන්ත වර්ගය </th>
+                                <th class="px-4 py-2 border"> කර්මාන්ත ආයතන සංඛාව</th>
+                                <th class="px-4 py-2 border"> මුළු කර්මාන්තශාලා ගණන</th>
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">කරදිය ධීවර කර්මාන්ත</h2>
+                    <div>
+
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> ධීවර පවුල් ගණන:</label>
+                            <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ධීවර ජනගහනය:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">සක්රීය ධීවරයින් ගණන:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ධීවර සමිති ගණන:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> ධීවර පවුල් ගණන </th>
+                                <th class="px-4 py-2 border"> ධීවර ජනගහනය</th>
+                                <th class="px-4 py-2 border"> සක්රීය ධීවරයින් ගණන</th>
+                                <th class="px-4 py-2 border">ධීවර සමිති ගණන</th>
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">ක්‍රියාත්මක තත්වයේ පවතින කරදිය ධිවර සමිති</h2>
+                    <div>
+
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> අනු අංකය:</label>
+                            <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ධීවර සමිතියේ නම:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ධීවර සමිතියේ ලිපිනය:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> අනු අංකය </th>
+                                <th class="px-4 py-2 border"> ධීවර සමිතියේ නම</th>
+                                <th class="px-4 py-2 border"> ධීවර සමිතියේ ලිපිනය</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">මිරිදිය ධීවර කර්මාන්ත</h2>
+                    <div>
+
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> ධීවර පවුල් ගණන:</label>
+                            <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ධීවර ජනගහනය:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">සක්‍රිය ධීවරයින් ගණන:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ධීවර සමිති ගණන:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> ධීවර පවුල් ගණන </th>
+                                <th class="px-4 py-2 border"> ධීවර ජනගහනය</th>
+                                <th class="px-4 py-2 border"> සක්‍රිය ධීවරයින් ගණන</th>
+                                <th class="px-4 py-2 border">ධීවර සමිති ගණන</th>
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">ක්‍රියාත්මක තත්වයේ පවතින මිරිදිය ධිවර සමිති</h2>
+                    <div>
+
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> අනු අංකය:</label>
+                            <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ධීවර සමිතියේ නම:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ධීවර සමිතියේ ලිපිනය:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> අනු අංකය </th>
+                                <th class="px-4 py-2 border"> ධීවර සමිතියේ නම</th>
+                                <th class="px-4 py-2 border"> ධීවර සමිතියේ ලිපිනය</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> මිරිදිය ධිවර කර්මාන්තය</h2>
+                    <div>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> අනු අංකය:</label>
+                            <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">වසම තුල පිහිටා ඇති මිරිදිය ධීවර කර්මාන්ත සිදු කරන (නිත්‍ය/කාලින) වැව්/ජලාශ නමි:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> අනු අංකය </th>
+                                <th class="px-4 py-2 border"> වසම තුල පිහිටා ඇති මිරිදිය ධීවර කර්මාන්ත සිදු කරන (නිත්‍ය/කාලින) වැව්/ජලාශ නමි</th>
+                              
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> හෝටල් ව්‍යාප්තිය</h2>
+                    <div>
+
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> හෝටල් වර්ගය:</label>
+                            <select id="source_type" name="source_type" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                                <option value="" disabled selected>හෝටල් වර්ගයක් තෝරන්න</option>
+                                <option value="ජාතික පාසල් "> තරු පන්තියේ හෝටල් සංඛාව </option>
+                                <option value="1 AB උසස් පෙල විද්‍යා විෂයන් ඇති පාසල්"> තරු පංතියේ නොවන හෝටල් සංඛාව</option>
+                                <option value="1 C උසස් පෙල කලා/ වාණිජ විෂයන් ඇති පාසල්"> ගෙස්ට් හවුස් සංඛාව</option>
+                                <option value="1 C උසස් පෙල කලා/ වාණිජ විෂයන් ඇති පාසල්"> විලාස්</option>
+                                 <option value="1 C උසස් පෙල කලා/ වාණිජ විෂයන් ඇති පාසල්"> සම්භාහන මධ්‍යසථාන</option>
+                            </select>
+                        </div><br>
+
+                        <div>
+                            <label for="source_type"
+                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">හෝටල් සංඛාව:</label>
+                             <input type="text" id="school_name" name="school_name" required
+                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
+                        </div><br>
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150">
+                            Insert
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                    <table class="shadow-md border rounded-lg w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border"> හෝටල් වර්ගය </th>
+                                <th class="px-4 py-2 border"> හෝටල් සංඛාව</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="privateSchoolTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
 </x-app-layout>
