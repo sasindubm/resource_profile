@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+require __DIR__.'/api.php';
+require __DIR__ . '/auth.php';
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,15 +22,47 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/basic', function () {
-    return view('basic_information_page');
+    return view('BasicInformationPage');
 })->name('basic');
 
 Route::get('/env', function () {
     return view('EnvironmentalInformation');
 })->name('env');
 
+Route::get('/edu', function () {
+    return view('EducationPage');
+})->name('edu');
+
+Route::get('/reg', function () {
+    return view('ReligionInformation');
+})->name('reg');
+
+Route::get('/pop', function () {
+    return view('populationInformation');
+})->name('pop');
+
+Route::get('/hou', function () {
+    return view('houseInformation');
+})->name('hou');
+
+Route::get('/hea', function () {
+    return view('healthInformation');
+})->name('hea');
+
 Route::get('/infras', function () {
     return view('InfrastructurePage');
 })->name('infras');
+
+Route::get('/eco', function () {
+    return view('EconomicActivity');
+})->name('eco');
+
+Route::get('/com', function () {
+    return view('CommunityInformation');
+})->name('com');
+
+Route::get('/soc', function () {
+    return view('SocialWelfare');
+})->name('soc');
 
 require __DIR__.'/auth.php';

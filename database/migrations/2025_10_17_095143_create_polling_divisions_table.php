@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('GramaNiladariDivision', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('polling_divisions', function (Blueprint $table) {
+            $table->string('pd_code')->primary();
+            $table->string('pd_name');
         });
     }
 
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('GramaNiladariDivision');
+        Schema::dropIfExists('polling_divisions');
     }
 };

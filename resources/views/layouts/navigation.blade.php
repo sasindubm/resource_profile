@@ -3,21 +3,22 @@
         ['route' => 'dashboard', 'label' => 'මුල් පිටුව'],
         ['route' => 'basic', 'label' => 'මූලික තොරතුරු'],
         ['route' => 'env', 'label' => 'පාරිසරික තොරතුරු'],
-        ['route' => 'dashboard', 'label' => 'Question 3'],
-        ['route' => 'dashboard', 'label' => 'Question 4'],
+        ['route' => 'pop', 'label' => 'ජනගහන තොරතුරු'],
+        ['route' => 'hou', 'label' => 'නිවාස තොරතුරු'],
         ['route' => 'dashboard', 'label' => 'Question 5'],
-        ['route' => 'dashboard', 'label' => 'Question 6'],
-        ['route' => 'dashboard', 'label' => 'Question 7'],
-        ['route' => 'dashboard', 'label' => 'Question 8'],
-        ['route' => 'dashboard', 'label' => 'Question 9'],
+        ['route' => 'edu', 'label' => 'අධ්‍යාපන තොරතුරු'],
+        ['route' => 'reg', 'label' => 'ආගමික හා සංස්කෘතික කටයුතු'],
+        ['route' => 'hea', 'label' => 'සෞඛ්‍ය තොරතුරු'],
+        ['route' => 'eco', 'label' => 'ආර්ථික කටයුතු'],
         ['route' => 'infras', 'label' => 'යටිතල පහසුකම්'],
-        ['route' => 'dashboard', 'label' => 'Question 11'],
-        ['route' => 'dashboard', 'label' => 'Question 12'],
+        ['route' => 'soc', 'label' => 'සමාජ සුභසාධන'],
+        ['route' => 'com', 'label' => 'ප්‍රජාමූල තොරතුරු'],
+        ['route' => 'dashboard', 'label' => 'Question 13'],
     ];
 @endphp
 
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex font-bold">
                 <!-- Logo -->

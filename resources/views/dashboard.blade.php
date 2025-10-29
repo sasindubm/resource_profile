@@ -1,6 +1,8 @@
 <x-app-layout>
+    @vite('resources/js/pages/dashboard_con.js')
+
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <!-- Greeting -->
                 <div class="p-6 text-gray-900 dark:text-gray-100 font-bold text-lg">
@@ -16,10 +18,10 @@
                                 <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md p-4">
                                     <h2 class="font-bold text-lg mb-2">මූලික තොරතුරු</h2>
                                     <div class="space-y-1 text-md">
-                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span> 176B</div>
-                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ නම: </span>කොට්ටව බටහිර</div>
-                                        <div><span class="font-semibold">දිස්ත්‍රික්කය:</span> Sample District</div>
-                                        <div><span class="font-semibold">ප්‍රාදේශීය ලේකම් කොට්ඨාශය: </span> Sample Division</div>
+                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ අංකය: </span><span id="gnd_number"></span></div>
+                                        <div><span class="font-semibold">ග්‍රාම නිලධාරී වසමේ නම: </span><span id="gnd_name"></span></div>
+                                        <div><span class="font-semibold">දිස්ත්‍රික්කය:</span><span id="d_name"></span></div>
+                                        <div><span class="font-semibold">ප්‍රාදේශීය ලේකම් කොට්ඨාශය: </span><span id="ds_name"></span></div>
                                         <div><span class="font-semibold">පළාත් පාලන ආයතනය/බල ප්‍රදේශය: </span> Sample Area</div>
                                         <div><span class="font-semibold">ගොවිජන සේවා මධ්‍යස්ථානය: </span> Sample Center</div>
                                         <div><span class="font-semibold">අධ්‍යාපන කලාපය: </span> Sample Zone</div>
@@ -48,12 +50,12 @@
                                     </thead>
                                     <tbody>
                                         <tr class="text-center">
-                                            <td class="px-4 py-2 border">176B</td>
-                                            <td class="px-4 py-2 border">කොට්ටව බටහිර</td>
-                                            <td class="px-4 py-2 border">ගාල්ල</td>
-                                            <td class="px-4 py-2 border">යක්කලමුල්ල</td>
-                                            <td class="px-4 py-2 border">බද්දේගම</td>
-                                            <td class="px-4 py-2 border">යක්කලමුල්ල</td>
+                                            <td class="px-4 py-2 border" id="gnd_numberd"></td>
+                                            <td class="px-4 py-2 border" id="gnd_named"></td>
+                                            <td class="px-4 py-2 border" id="d_named"></td>
+                                            <td class="px-4 py-2 border" id="ds_named"></td>
+                                            <td class="px-4 py-2 border">Sample Area</td>
+                                            <td class="px-4 py-2 border">Sample Center</td>
                                             <td class="px-4 py-2 border">Sample Zone</td>
                                             <td class="px-4 py-2 border">Sample Education Division</td>
                                             <td class="px-4 py-2 border">Sample River Division</td>
@@ -63,7 +65,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br>
+                <p id="gnd_name"></p>
 
                 <!-- Summary Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
@@ -96,3 +99,4 @@
         </div>
     </div>
 </x-app-layout>
+<x-footer />

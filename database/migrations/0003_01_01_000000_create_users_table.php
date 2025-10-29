@@ -16,8 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('occupation');
             $table->string('password');
             $table->rememberToken();
+            $table->string('gnd_uid');
+            $table->foreign('gnd_uid')->references('gnd_uid')->on('grama_niladari_divisions')->onDelete('cascade');
             $table->timestamps();
         });
 
@@ -45,5 +48,9 @@ return new class extends Migration
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign(['gnd_uid']);
+            $table->dropColumn('gnd_uid');
+        });
     }
 };
