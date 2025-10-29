@@ -54,8 +54,8 @@
                                             <td class="px-4 py-2 border" id="gnd_named"></td>
                                             <td class="px-4 py-2 border" id="d_named"></td>
                                             <td class="px-4 py-2 border" id="ds_named"></td>
-                                            <td class="px-4 py-2 border">බද්දේගම</td>
-                                            <td class="px-4 py-2 border">යක්කලමුල්ල</td>
+                                            <td class="px-4 py-2 border">Sample Area</td>
+                                            <td class="px-4 py-2 border">Sample Center</td>
                                             <td class="px-4 py-2 border">Sample Zone</td>
                                             <td class="px-4 py-2 border">Sample Education Division</td>
                                             <td class="px-4 py-2 border">Sample River Division</td>

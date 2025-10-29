@@ -24,21 +24,27 @@
 <body class="bg-gray-100 dark:bg-gray-900">
     <header class="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 fixed top-0 bg-gray-100 dark:bg-gray-900 z-10 shadow-md">
         @if (Route::has('login'))
-        <nav class="flex justify-end space-x-4">
-            <a href="#infoSec" class="px-4 py-2 text-black flex items-center underline hover:text-gray-700 dark:text-gray-300 dark:hover:text-white">
-                <span>Information</span>
-                <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#1f1f1f" class="ml-1">
-                    <path d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z" />
-                </svg>
-            </a>
-            @auth
-            <a href="{{ url('/dashboard') }}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Dashboard</a>
-            @else
-            <a href="{{ route('login') }}" class="px-4 py-2 bg-gray-200 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Log in</a>
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Register</a>
-            @endif
-            @endauth
+        <nav class="flex justify-between align-center space-x-4">
+            <div class="flex align-center justify-center">
+                <!-- <img src="storage/pngwing.com.png" alt="government_logo" class="h-10 inline-block me-3"> -->
+                <h1 class="text-2xl text-bold">දකුණු පළාත් සැලසුම් ලේකම් කාර්‍යාලය</h1>
+            </div>
+            <div class="flex justify-end space-x-4">
+                <a href="#infoSec" class="px-4 py-2 text-black flex items-center underline hover:text-gray-700 dark:text-gray-300 dark:hover:text-white">
+                    <span>Information</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#1f1f1f" class="ml-1">
+                        <path d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z" />
+                    </svg>
+                </a>
+                @auth
+                <a href="{{ url('/dashboard') }}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Dashboard</a>
+                @else
+                <a href="{{ route('login') }}" class="px-4 py-2 bg-gray-200 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Log in</a>
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Register</a>
+                @endif
+                @endauth
+            </div>
         </nav>
         @endif
     </header>
@@ -83,49 +89,8 @@
                         <!-- GND List -->
                         <div class="relative rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-5 shadow-sm hover:border-gray-400 hover:ring-1 hover:ring-gray-400">
                             <div class="flex items-center justify-between">
-                                <div class="flex-1 truncate">
-                                    <div class="flex items-center space-x-3">
-                                        <h3 class="truncate text-sm font-medium text-gray-900 dark:text-white">GND Division List</h3>
-                                    </div>
-                                    <p class="mt-1 truncate text-sm text-gray-500 dark:text-gray-400">Complete list of Grama Niladhari Divisions</p>
-                                </div>
-                                <a href="#" class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">
-                                    Download
-                                    <svg class="ml-2 -mr-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- District List -->
-                        <div class="relative rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-5 shadow-sm hover:border-gray-400 hover:ring-1 hover:ring-gray-400">
-                            <div class="flex items-center justify-between">
-                                <div class="flex-1 truncate">
-                                    <div class="flex items-center space-x-3">
-                                        <h3 class="truncate text-sm font-medium text-gray-900 dark:text-white">District List</h3>
-                                    </div>
-                                    <p class="mt-1 truncate text-sm text-gray-500 dark:text-gray-400">Complete list of Districts in Sri Lanka</p>
-                                </div>
-                                <a href="#" class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">
-                                    Download
-                                    <svg class="ml-2 -mr-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- DS List -->
-                        <div class="relative rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-5 shadow-sm hover:border-gray-400 hover:ring-1 hover:ring-gray-400">
-                            <div class="flex items-center justify-between">
-                                <div class="flex-1 truncate">
-                                    <div class="flex items-center space-x-3">
-                                        <h3 class="truncate text-sm font-medium text-gray-900 dark:text-white">DS Division List</h3>
-                                    </div>
-                                    <p class="mt-1 truncate text-sm text-gray-500 dark:text-gray-400">Complete list of Divisional Secretariats</p>
-                                </div>
-                                <a href="#" class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">
+                                <p class="truncate text-sm font-medium text-gray-900 dark:text-white">දකුණු පළාත් පරිපාලන ව්‍යුහ ලැයිස්තුව</p>&nbsp;&nbsp;
+                                <a href="resources/files/" download class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">
                                     Download
                                     <svg class="ml-2 -mr-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
