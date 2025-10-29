@@ -31,4 +31,8 @@ class GovFigureController extends Controller
 
         return response()->json(['success' => true]);
     }
+
+    public function deleteGovernmentFigure($gf_id) {
+        return response()->json(GovermentFigure::where('gf_id', $gf_id)->delete());
+    }
 }

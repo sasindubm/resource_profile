@@ -28,4 +28,8 @@ class AbondenedBuildingController extends Controller
 
         return response()->json(['success' => true]);
     }
+
+    public function deleteAbondenedBuilding($ab_id) {
+        return response()->json(AbondenedGovernmentBuilding::where('ab_id', $ab_id)->delete());
+    }
 }
