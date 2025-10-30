@@ -10,18 +10,18 @@
                         @csrf
 
                         <div class="mb-6">
-                            <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">ජල
+                            <label for="water_source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">ජල
                                 මුලාශ්‍ර නම:</label>
 
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="water_source_name" name="water_source_name" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                         </div>
 
 
                         <div class="mb-6">
-                            <label for="source_type"
+                            <label for="water_type"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">වර්ගය:</label>
-                            <select id="source_type" name="source_type" required
+                            <select id="water_type" name="water_type" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 <option value="" disabled selected>ජල මුලාශ්‍ර වර්ගයක් තෝරන්න</option>
                                 <option value="ගංගාව">ගංගාව</option>
@@ -65,23 +65,23 @@
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">2 පාරිසරික වශයෙන් සංවේදී කලාප/ස්ථාන</h2>
                     <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                    <form id="waterSourceForm" class="space-y-4">
+                    <form id="regionsSourceForm" class="space-y-4">
                         @csrf
 
                         <div class="mb-6">
-                            <label for="source_name"
+                            <label for="region_name"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">කලාප/ස්ථාන නම
                                 :</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="region_name" name="region_name" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                         </div>
 
                         <div class="mb-6">
-                            <label for="source_name"
+                            <label for="region_place"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ස්ථානයේ/කලාපයේ
                                 වැදගත්කම
                                 :</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="region_place" name="region_place" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                         </div>
 
@@ -106,7 +106,7 @@
                                 <th class="px-4 py-2 border">ස්ථානයේ/කලාපයේ වැදගත්කම</th>
                             </tr>
                         </thead>
-                        <tbody id="waterSourceTableBody">
+                        <tbody id="regionSourceTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -119,13 +119,13 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">3 ප්‍රදේශයේ පවතින භෞතික සම්පත්</h2>
                 <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                <form id="waterSourceForm" class="space-y-4">
+                <form id="physicalSourceForm" class="space-y-4">
                     @csrf
 
                     <div class="mb-6">
-                        <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
+                        <label for="physical_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                             භෞතික සම්පත් නම:</label>
-                        <input type="text" id="source_name" name="source_name" required
+                        <input type="text" id="physical_name" name="physical_name" required
                             class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                     </div>
 
@@ -167,7 +167,7 @@
                         <th class="px-4 py-2 border">නිෂ්පාදනය කටයුත්තකට,සංවර්ධනයට යොදාගෙන තිබේද</th>
                     </tr>
                 </thead>
-                <tbody id="waterSourceTableBody">
+                <tbody id="physicalSourceTableBody">
                 </tbody>
             </table>
         </div>
@@ -180,14 +180,14 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">4 පාරිසරික ගැටළු හා ආපදාවන් </h2>
                 <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                <form id="waterSourceForm" class="space-y-4">
+                <form id="econSourceForm" class="space-y-4">
                     @csrf
 
 
                    <div class="mb-6">
-                        <label for="source_type"
+                        <label for="econ_problem"
                             class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාරිසරික ගැටළුව:</label>
-                        <select id="source_type" name="source_type" required
+                        <select id="econ_problem" name="econ_problem" required
                             class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             <option value="" disabled selected>ගැටළුව තෝරන්න</option>
                             <option value="ගංවතුර">ගංවතුර</option>
@@ -202,16 +202,16 @@
                         </select>
                     </div>
                     <div class="mb-6">
-                        <label for="source_name"
+                        <label for="econ_time"
                             class="block font-medium text-sm text-gray-700 dark:text-gray-300">ඇත්නම් බහුලව සිදුවන
                             කාලසීමාව:</label>
-                        <input type="text" id="source_name" name="source_name" required
+                        <input type="text" id="econ_time" name="econ_time" required
                             class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                     </div>
                     <div class="mb-6">
-                        <label for="source_name"
+                        <label for="suggession"
                             class="block font-medium text-sm text-gray-700 dark:text-gray-300">ගැටළුව සඳහා ගත යුතු පිළියම් යෝජනා :</label>
-                        <input type="text" id="source_name" name="source_name" required
+                        <input type="text" id="suggession" name="suggession" required
                             class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                     </div>
 
@@ -236,7 +236,7 @@
                             <th class="px-4 py-2 border">ගත යුතු පිළියම් යෝජනා</th>
                         </tr>
                     </thead>
-                    <tbody id="waterSourceTableBody">
+                    <tbody id="econSourceTableBody">
                     </tbody>
                 </table>
             </div>
@@ -248,22 +248,22 @@
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">5 හදිසි ආපදා අවස්ථාවකදී හඳුනාගත් ආරක්ෂිත ස්ථාන</h2>
                     <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                    <form id="waterSourceForm" class="space-y-4">
+                    <form id="emergencySourceForm" class="space-y-4">
                         @csrf
 
                         <div class="mb-6">
-                            <label for="source_name"
+                            <label for="safe_place_name"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ආරක්ෂිත ස්ථානයේ නම
                                 :</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="safe_place_name" name="safe_place_name" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                         </div>
 
                         <div class="mb-6">
-                            <label for="source_name"
+                            <label for="safe_place_address"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ලිපිනය
                                 :</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="safe_place_address" name="safe_place_address" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                         </div>
 
@@ -288,7 +288,7 @@
                                 <th class="px-4 py-2 border">ලිපිනය</th>
                             </tr>
                         </thead>
-                        <tbody id="waterSourceTableBody">
+                        <tbody id="safePlaceTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -300,30 +300,30 @@
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">6 සංචාරක ආකර්ශනය සහිත ප්‍රදේශ</h2>
                     <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                    <form id="waterSourceForm" class="space-y-4">
+                    <form id="touristSourceForm" class="space-y-4">
                         @csrf
 
                         <div class="mb-6">
-                            <label for="source_name"
+                            <label for="tourist_place"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300"> ස්ථානයේ නම
                                 :</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="tourist_place" name="tourist_place" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                         </div>
 
                         <div class="mb-6">
-                            <label for="source_name"
+                            <label for="attaction"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ආකර්ශනය ඇතිවීමට හේතුව/ස්ථානයේ විශේෂත්වය
                                 :</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="attaction" name="attaction" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                         </div>
 
                         <div class="mb-6">
-                            <label for="source_name"
+                            <label for="right"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">අයිතිය
                                 :</label>
-                            <input type="text" id="source_name" name="source_name" required
+                            <input type="text" id="right" name="right" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                         </div>
 
@@ -348,7 +348,7 @@
                                 <th class="px-4 py-2 border">අයිතිය</th>
                             </tr>
                         </thead>
-                        <tbody id="waterSourceTableBody">
+                        <tbody id="touristTableBody">
                         </tbody>
                     </table>
                 </div>

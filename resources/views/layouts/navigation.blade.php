@@ -13,7 +13,7 @@
         ['route' => 'infras', 'label' => 'යටිතල පහසුකම්'],
         ['route' => 'soc', 'label' => 'සමාජ සුභසාධන'],
         ['route' => 'com', 'label' => 'ප්‍රජාමූල තොරතුරු'],
-        ['route' => 'dashboard', 'label' => 'Question 13'],
+        ['route' => 'dashboard', 'label' => 'වෙනත්'],
     ];
 @endphp
 
