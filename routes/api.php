@@ -6,6 +6,7 @@ use App\Http\Controllers\BasicInfoController;
 use App\Http\Controllers\GovFigureController;
 use App\Http\Controllers\AbondenedBuildingController;
 use App\Http\Controllers\AbondenedProjectController;
+use App\Http\Controllers\WaterSourceController;
 
 //Register API routes for fetching location and basic info names
 Route::get('/api/ds-by-district/{d_code}', [LocationController::class, 'getDS']);
@@ -16,6 +17,8 @@ Route::get('/api/gnd-by-uid/{gnd_uid}', [BasicInfoController::class, 'getGNDName
 Route::get('/api/ds-by-gnd/{gnd_uid}', [BasicInfoController::class, 'getDSNameByGND']);
 Route::get('/api/district-by-gnd/{gnd_uid}', [BasicInfoController::class, 'getDistrictNameByGND']);
 Route::get('/api/gnd-number-by-uid/{gnd_uid}', [BasicInfoController::class, 'getGNDNumber']);
+Route::get('/api/lgd-by-gnd/{gnd_uid}', [BasicInfoController::class, 'getLGDNameByGND']);
+Route::get('/api/pd-by-gnd/{gnd_uid}', [BasicInfoController::class, 'getPDNameByGND']);
 
 //Government Figures routes
 Route::post('/api/insert-gf/{gnd_uid}', [GovFigureController::class, 'insertGovernmentFigure']);
@@ -31,3 +34,7 @@ Route::delete('/api/delete-agb/{ab_id}', [AbondenedBuildingController::class, 'd
 Route::get('/api/get-ap/{gnd_uid}', [AbondenedProjectController::class, 'getAbondenedProjects']);
 Route::post('/api/insert-ap/{gnd_uid}', [AbondenedProjectController::class, 'addAbondenedProject']);
 Route::delete('/api/delete-ap/{ap_id}', [AbondenedProjectController::class, 'deleteAbondenedProject']);
+
+//Water Sources routes
+Route::post('/api/insert-ws/{gnd_uid}', [WaterSourceController::class, 'insertWaterSource']);
+Route::get('/api/get-ws/{gnd_uid}', [WaterSourceController::class, 'getWaterSources']);

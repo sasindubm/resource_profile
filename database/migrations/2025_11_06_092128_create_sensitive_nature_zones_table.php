@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('local_government_divisions', function (Blueprint $table) {
-            $table->string('lgd_uid')->primary();
-            $table->string('lgd_name');
+        Schema::create('sensitive_nature_zones', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('local_government_divisions');
+        Schema::dropIfExists('sensitive_nature_zones');
     }
 };
