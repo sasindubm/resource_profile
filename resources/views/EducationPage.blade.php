@@ -81,9 +81,9 @@
                         @csrf
 
                         <div>
-                            <label for="source_type"
+                            <label for="school_type"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">වර්ගය:</label>
-                            <select id="source_type" name="source_type" required
+                            <select id="school_type" name="school_type" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 <option value="" disabled selected>පාසල් වර්ගයක් තෝරන්න</option>
                                 <option value="ජාතික පාසල් ">ජාතික පාසල් </option>
@@ -114,7 +114,7 @@
                         </div><br>
                         @csrf
                         <div>
-                            <label for="source_type"
+                            <label for="water_facility"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ජල
                                 පහසුකම්:</label>
                             <label> <input type="radio" name="color" value="blue"> ඇත </label>
@@ -123,7 +123,7 @@
                         </div><br>
 
                         <div>
-                            <label for="source_type"
+                            <label for="toilet_facility"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">වැසිකිලි
                                 පහසුකම්:</label>
 
@@ -152,7 +152,7 @@
 
                             </tr>
                         </thead>
-                        <tbody id="privateSchoolTableBody">
+                        <tbody id="facilityTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -167,18 +167,18 @@
                         <div>
 
                             <div>
-                                <label for="source_type"
+                                <label for="school_sub"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
                                     අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="school_sub" name="school_sub" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
                             <div>
-                                <label for="source_type"
+                                <label for="old_school_name"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාසලේ
                                     නම:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="old_school_name" name="old_school_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             @csrf
@@ -186,18 +186,18 @@
                             <div>
 
                                 <div>
-                                    <label for="source_type"
+                                    <label for="last_year"
                                         class="block font-medium text-sm text-gray-700 dark:text-gray-300">වැසීගිය
                                         වර්ශය:</label>
-                                    <input type="text" id="source_name" name="source_name" required
+                                    <input type="text" id="last_year" name="last_year" required
                                         class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 </div><br>
                                 @csrf
                                 <div>
-                                    <label for="source_type"
+                                    <label for="build_count"
                                         class="block font-medium text-sm text-gray-700 dark:text-gray-300">පවතින
                                         ගොඩනැගිලි සංඛ්‍යාව:</label>
-                                    <input type="text" id="source_name" name="source_name" required
+                                    <input type="text" id="build_count" name="build_count" required
                                         class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 </div><br>
                                 <button type="submit"
@@ -222,7 +222,7 @@
 
                             </tr>
                         </thead>
-                        <tbody id="privateSchoolTableBody">
+                        <tbody id="lastSchoolTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -242,18 +242,18 @@
                         <div>
 
                             <div>
-                                <label for="source_type"
+                                <label for="private_sub"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
                                     අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="private_sub" name="private_sub" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
                             <div>
-                                <label for="source_type"
+                                <label for="private_school_name"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාසලේ
                                     නම:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="private_school_name" name="private_school_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             @csrf
@@ -261,18 +261,18 @@
                             <div>
 
                                 <div>
-                                    <label for="source_type"
+                                    <label for="private_teacher"
                                         class="block font-medium text-sm text-gray-700 dark:text-gray-300">ගුරුවරු
                                         ගණන:</label>
-                                    <input type="text" id="source_name" name="source_name" required
+                                    <input type="text" id="private_teacher" name="private_teacher" required
                                         class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 </div><br>
                                 @csrf
                                 <div>
-                                    <label for="source_type"
+                                    <label for="private_student"
                                         class="block font-medium text-sm text-gray-700 dark:text-gray-300">සිසුන්
                                         ගණන:</label>
-                                    <input type="text" id="source_name" name="source_name" required
+                                    <input type="text" id="private_student" name="private_student" required
                                         class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 </div><br>
                                 @csrf
@@ -312,27 +312,27 @@
                     <div>
                         <div>
                             <div>
-                                <label for="source_type"
+                                <label for="piriven_sub"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
                                     අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="piriven_sub" name="piriven_sub" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
                             <div>
-                                <label for="source_type"
+                                <label for="piriven_name"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාසලේ
                                     නම:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="piriven_name" name="piriven_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             @csrf
 
                             <div>
-                                <label for="source_type"
+                                <label for="piriven_type"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">පිරිවෙන්
                                     වර්ගය:</label>
-                                <select id="source_type" name="source_type" required
+                                <select id="piriven_type" name="piriven_type" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                     <option value="" disabled selected>පිරිවෙන් වර්ගයක් තෝරන්න</option>
                                     <option value="ජාතික පාසල් ">මුලික</option>
@@ -346,18 +346,18 @@
                             <div>
 
                                 <div>
-                                    <label for="source_type"
+                                    <label for="piriven_teacher"
                                         class="block font-medium text-sm text-gray-700 dark:text-gray-300">ගුරුවරු
                                         ගණන:</label>
-                                    <input type="text" id="source_name" name="source_name" required
+                                    <input type="text" id="piriven_teacher" name="piriven_teacher" required
                                         class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 </div><br>
                                 @csrf
                                 <div>
-                                    <label for="source_type"
+                                    <label for="piriven_student"
                                         class="block font-medium text-sm text-gray-700 dark:text-gray-300">සිසුන්
                                         ගණන:</label>
-                                    <input type="text" id="source_name" name="source_name" required
+                                    <input type="text" id="piriven_student" name="piriven_student" required
                                         class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 </div><br>
                                 @csrf
@@ -382,7 +382,7 @@
                                 <th class="px-4 py-2 border">සිසුන් ගණන</th>
                             </tr>
                         </thead>
-                        <tbody id="privateSchoolTableBody">
+                        <tbody id="pirivenTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -398,18 +398,18 @@
                         <div>
 
                             <div>
-                                <label for="source_type"
+                                <label for="tec_sub"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
                                     අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="tec_sub" name="tec_sub" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
                             <div>
-                                <label for="source_type"
+                                <label for="tec_name"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300"> කාර්මික හා
                                     වෘත්තීය පුහුණු ආයතන:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="tec_name" name="tec_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
@@ -431,7 +431,7 @@
                                 <th class="px-4 py-2 border">කාර්මික හා වෘත්තීය පුහුණු ආයතන</th>
                             </tr>
                         </thead>
-                        <tbody id="privateSchoolTableBody">
+                        <tbody id="tecTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -446,33 +446,33 @@
                         <div>
 
                             <div>
-                                <label for="source_type"
+                                <label for="preschool_sub"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
                                     අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="preschool_sub" name="preschool_sub" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
                             <div>
-                                <label for="source_type"
+                                <label for="preschool_name"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300"> පෙර පාසලේ නම සහ
                                     ලිපිනය:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="preschool_name" name="preschool_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             <div>
-                                <label for="source_type"
+                                <label for="preschool_teacher"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">ගුරුවරු
                                     ගණන:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="preschool_teacher" name="preschool_teacher" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             @csrf
                             <div>
-                                <label for="source_type"
+                                <label for="preschool_student"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">සිසුන්
                                     ගණන:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="preschool_student" name="preschool_student" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             <button type="submit"
@@ -499,7 +499,7 @@
                                 <th class="px-4 py-2 border">සිසුන් ගණන</th>
                             </tr>
                         </thead>
-                        <tbody id="privateSchoolTableBody">
+                        <tbody id="preSchoolTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -514,25 +514,25 @@
                         <div>
 
                             <div>
-                                <label for="source_type"
+                                <label for="dhamma_school_sub"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
                                     අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="dhamma_school_sub" name="dhamma_school_sub" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
                             <div>
-                                <label for="source_type"
+                                <label for="dhamma_school_name"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300"> දහම් පාසලේ
                                     නම:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="dhamma_school_name" name="dhamma_school_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             <div>
-                                <label for="source_type"
+                                <label for="dhamma_school_type"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">දහම් පාසල අයත්
                                     ශාසනාරක්ෂක බල මණ්ඩලය:</label>
-                                <select id="source_type" name="source_type" required
+                                <select id="dhamma_school_type" name="dhamma_school_type" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                     <option value="" disabled selected>දහම් පාසල අයත් ශාසනාරක්ෂක බල මණ්ඩලය වර්ගයක්
                                         තෝරන්න</option>
@@ -544,18 +544,18 @@
                                 </select>
                             </div><br>
                             <div>
-                                <label for="source_type"
+                                <label for="dhamma_school_teacher"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">ගුරුවරු
                                     ගණන:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="dhamma_school_teacher" name="dhamma_school_teacher" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             @csrf
                             <div>
-                                <label for="source_type"
+                                <label for="dhamma_school_student"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">සිසුන්
                                     ගණන:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="dhamma_school_student" name="dhamma_school_student" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             <button type="submit"
@@ -579,7 +579,7 @@
                                 <th class="px-4 py-2 border">සිසුන් ගණන</th>
                             </tr>
                         </thead>
-                        <tbody id="privateSchoolTableBody">
+                        <tbody id="dhammaSchoolTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -595,18 +595,18 @@
                         <div>
 
                             <div>
-                                <label for="source_type"
+                                <label for="class_sub"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
                                     අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="class_sub" name="class_sub" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
                             <div>
-                                <label for="source_type"
+                                <label for="class_name"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300"> උපකාරක පන්ති
                                     ආයතනයන්හි නම:</label>
-                                <input type="text" id="source_name" name="source_name" required
+                                <input type="text" id="class_name" name="class_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
 
@@ -629,7 +629,7 @@
 
                             </tr>
                         </thead>
-                        <tbody id="privateSchoolTableBody">
+                        <tbody id="classTableBody">
                         </tbody>
                     </table>
                 </div>

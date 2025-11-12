@@ -10,13 +10,11 @@
                         @csrf
                         <div class="mb-6">
                             <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">ආයතනයේ නම:</label>
-                            <input type="text" id="gf_name" name="gf_name" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
+                            <x-text-input type="text" id="gf_name" name="gf_name" required />
                         </div>
                         <div class="mb-6">
                             <label for="source_type" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">වර්ගය:</label>
-                            <select id="gf_type" name="gf_type" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
+                            <select id="gf_type" name="gf_type" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" required>
                                 <option value="" disabled selected>ආයතන වර්ගයක් තෝරන්න</option>
                                 <option value="ප්‍රාදේශීය සභාව">ප්‍රාදේශීය සභාව</option>
                                 <option value="ප්‍රාදේශීය ලේකම් කාර්‍යාලය">ප්‍රාදේශීය ලේකම් කාර්‍යාලය</option>
@@ -26,14 +24,10 @@
                         </div>
                         <div class="mb-6">
                             <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">ලිපිනය:</label>
-                            <input type="text" id="gf_address" name="gf_address" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
+                            <x-text-input type="text" id="gf_address" name="gf_address" required />
                         </div>
-                        <div>
-                            <x-primary-button  class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
-                                {{ __('insert') }}
-                            </x-primary-button>
-                        </div>
+                        <x-primary-button>insert</x-primary-button>
+                        <x-input-error :messages="$errors->all()" />
                     </form>
 
                 </div>
@@ -66,13 +60,11 @@
                         @csrf
                         <div class="mb-6">
                             <label for="ab_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">ගොඩනැගිල්ලේ නම:</label>
-                            <input type="text" id="ab_name" name="ab_name" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
+                            <x-text-input type="text" id="ab_name" name="ab_name" required />
                         </div>
                         <div class="mb-6">
                             <label for="ab_used_for" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">යොදාගත් කාර්‍යය:</label>
-                            <input type="text" id="ab_used_for" name="ab_used_for" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
+                            <x-text-input type="text" id="ab_used_for" name="ab_used_for" required />
                         </div>
                         <div class="mb-6">
                             <label class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">නැවත භාවිතයට ගත හැකිද?:</label>
@@ -87,11 +79,8 @@
                                 </label>
                             </div>
                         </div>
-                        <div>
-                            <x-primary-button class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
-                                {{ __('insert') }}
-                            </x-primary-button>
-                        </div>
+                        <x-primary-button>insert</x-primary-button>
+                        <x-input-error :messages="$errors->all()" />
                     </form>
                 </div>
 
@@ -119,23 +108,18 @@
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-8">
                     <h2 class="text-xl font-semibold mb-6 dark:text-gray-200">2.අතහැර දැමූ රජයේ ව්‍යාපෘති පිළිබඳ තොරතුරු</h2>
-                    <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
+                    <form id="formAP" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
                         @csrf
                         <div class="mb-6">
-                            <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">ව්‍යාපෘතියේ නම:</label>
-                            <input type="text" id="source_name" name="source_name" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
+                            <label for="ap_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">ව්‍යාපෘතියේ නම:</label>
+                            <x-text-input type="text" id="ap_name" name="ap_name" required />
                         </div>
                         <div class="mb-6">
-                            <label for="source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">නවතා දැමීමට හේතුව:</label>
-                            <input type="text" id="source_name" name="source_name" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm px-4 py-2">
+                            <label for="ap_reason" class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">නවතා දැමීමට හේතුව:</label>
+                            <x-text-input type="text" id="ap_reason" name="ap_reason" required />
                         </div>
-                        <div>
-                            <x-primary-button class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
-                                {{ __('insert') }}
-                            </x-primary-button>
-                        </div>
+                        <x-primary-button>insert</x-primary-button>
+                        <x-input-error :messages="$errors->all()" />
                     </form>
                 </div>
 
@@ -144,12 +128,13 @@
                         <table class="shadow-md border rounded-lg w-full min-w-[400px]">
                             <thead>
                                 <tr>
+                                    <th class="px-6 py-6 border"></th>
                                     <th class="px-6 py-3 border">අනු අංකය</th>
                                     <th class="px-6 py-3 border">ව්‍යාපෘතියේ නම</th>
                                     <th class="px-6 py-3 border">නවතා දැමීමට හේතුව</th>
                                 </tr>
                             </thead>
-                            <tbody id="waterSourceTableBody">
+                            <tbody id="APBody">
                             </tbody>
                         </table>
                     </div>
