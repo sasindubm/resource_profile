@@ -45,6 +45,10 @@ Route::get('/hou', function () {
     return view('houseInformation');
 })->name('hou');
 
+Route::get('/sev', function () {
+    return view('serviceEmployee');
+})->name('sev');
+
 Route::get('/hea', function () {
     return view('healthInformation');
 })->name('hea');
