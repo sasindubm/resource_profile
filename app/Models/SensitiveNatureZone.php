@@ -8,6 +8,9 @@ class SensitiveNatureZone extends Model
 {
     protected $fillable = [
         'snz_name',
-        'snz_importance'
+        'snz_importance',
+        'normalized_name',
     ];
+
+    public $timestamps = false;
 }

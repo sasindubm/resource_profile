@@ -6,7 +6,8 @@ use App\Http\Controllers\BasicInfoController;
 use App\Http\Controllers\GovFigureController;
 use App\Http\Controllers\AbondenedBuildingController;
 use App\Http\Controllers\AbondenedProjectController;
-use App\Http\Controllers\WaterSourceController;
+use App\Http\Controllers\WaterResourceController;
+use App\Http\Controllers\SNZController;
 
 //Register API routes for fetching location and basic info names
 Route::get('/api/ds-by-district/{d_code}', [LocationController::class, 'getDS']);
@@ -36,5 +37,11 @@ Route::post('/api/insert-ap/{gnd_uid}', [AbondenedProjectController::class, 'add
 Route::delete('/api/delete-ap/{ap_id}', [AbondenedProjectController::class, 'deleteAbondenedProject']);
 
 //Water Sources routes
-Route::post('/api/insert-ws/{gnd_uid}', [WaterSourceController::class, 'insertWaterSource']);
-Route::get('/api/get-ws/{gnd_uid}', [WaterSourceController::class, 'getWaterSources']);
+Route::post('/api/insert-wr/{gnd_uid}', [WaterResourceController::class, 'insertWaterResource']);
+Route::get('/api/get-wr/{gnd_uid}', [WaterResourceController::class, 'getWaterResources']);
+Route::delete('/api/delete-wr/{wr_id}', [WaterResourceController::class, 'deleteWaterResource']);
+
+//SNZ routes
+Route::get('/api/get-snz/{gnd_uid}', [SNZController::class, 'getSNZ']);
+Route::post('/api/insert-snz/{gnd_uid}', [SNZController::class, 'insertSNZ']);
+Route::delete('/api/delete-snz/{snz_id}', [SNZController::class, 'deleteSNZ']);

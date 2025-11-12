@@ -12,9 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('water_resources', function (Blueprint $table) {
-            $table->id('ws_id');
-            $table->string('water_source_name');
-            $table->string('water_type');
+            $table->id('wr_id');
+            $table->string('wr_name');
+            $table->string('wr_type');
+            $table->string('normalized_name')->nullable()->index();
+            $table->unique(['normalized_name', 'wr_type']);
         });
     }
 

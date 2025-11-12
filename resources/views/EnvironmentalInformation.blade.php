@@ -10,17 +10,17 @@
                         @csrf
 
                         <div class="mb-6">
-                            <label for="water_source_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">ජල
+                            <label for="wr_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">ජල
                                 මුලාශ්‍ර නම:</label>
 
-                            <x-text-input type="text" id="water_source_name" name="water_source_name" required/>
+                            <x-text-input type="text" id="wr_name" name="wr_name" required/>
                         </div>
 
 
                         <div class="mb-6">
-                            <label for="water_type"
+                            <label for="wr_type"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">වර්ගය:</label>
-                            <select id="water_type" name="water_type" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" required>
+                            <select id="wr_type" name="wr_type" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" required>
                                 <option value="" disabled selected>ජල මුලාශ්‍ර වර්ගයක් තෝරන්න</option>
                                 <option value="ගංගාව">ගංගාව</option>
                                 <option value="ජලාශය/වැව">ජලාශය/වැව</option>
@@ -60,22 +60,22 @@
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">2 පාරිසරික වශයෙන් සංවේදී කලාප/ස්ථාන</h2>
 
-                    <form id="regionsSourceForm" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
+                    <form id="snzForm" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
                         @csrf
 
                         <div class="mb-6">
-                            <label for="region_name"
+                            <label for="snz_name"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">කලාප/ස්ථාන නම
                                 :</label>
-                            <x-text-input type="text" id="region_name" name="region_name" required/>
+                            <x-text-input type="text" id="snz_name" name="snz_name" required/>
                         </div>
 
                         <div class="mb-6">
-                            <label for="region_place"
+                            <label for="snz_importance"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ස්ථානයේ/කලාපයේ
                                 වැදගත්කම
                                 :</label>
-                            <x-text-input type="text" id="region_place" name="region_place" required/>
+                            <x-text-input type="text" id="snz_importance" name="snz_importance" required/>
                         </div>
 
                         <br>
@@ -90,12 +90,13 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
+                                <th class="px-4 py-2 border"></th>
                                 <th class="px-4 py-2 border">ID</th>
                                 <th class="px-4 py-2 border">කලාප/ස්ථාන නම</th>
                                 <th class="px-4 py-2 border">ස්ථානයේ/කලාපයේ වැදගත්කම</th>
                             </tr>
                         </thead>
-                        <tbody id="regionSourceTableBody">
+                        <tbody id="snzTableBody">
                         </tbody>
                     </table>
                 </div>

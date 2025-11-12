@@ -12,8 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sensitive_nature_zones', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('snz_id');
+            $table->string('snz_name');
+            $table->string('snz_importance');
+            $table->string('normalized_name')->nullable()->index();
         });
     }
 

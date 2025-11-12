@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class WaterResource extends Model
 {
     protected $fillable = [
-        'water_source_name',
-        'water_type',
+        'wr_name',
+        'wr_type',
+        'normalized_name',
     ];
 
     public $timestamps = false;
