@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             LGDSeeder::class,
             GNDHasLGDSeeder::class,
             PDSeeder::class,
-            PDHasGNDSeeder::class
+            PDHasGNDSeeder::class,
+            UserSeeder::class,
         ]);
 
     }
