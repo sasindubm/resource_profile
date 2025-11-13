@@ -10,32 +10,18 @@ class UserManagementController extends Controller
 {
     public function index()
     {
-        $users = User::where('is_admin', false)
+        return response()->json(User::where('is_admin', false)
             ->orderBy('created_at', 'desc')
-            ->paginate(15);
-
-        return view('Admin.admin_dashboard', compact('users'));
+            ->get());
     }
 
-    public function approve(User $user)
+    public function approve($user)
     {
-        if ($user->is_admin) {
-            return back()->with('error', 'Cannot modify admin users');
-        }
-
-        $user->update(['status' => 'approved']);
-
-        return back()->with('success', 'User approved successfully');
+        return response()->json(User::where('id', $user)->update(['status' => 'approved']));
     }
 
-    public function reject(User $user)
+    public function reject($user)
     {
-        if ($user->is_admin) {
-            return back()->with('error', 'Cannot modify admin users');
-        }
-
-        $user->update(['status' => 'rejected']);
-
-        return back()->with('success', 'User rejected');
+        return response()->json(User::where('id', $user)->update(['status' => 'denied']));
     }
 }
