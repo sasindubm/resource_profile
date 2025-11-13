@@ -8,7 +8,10 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/js/pages/dashboard_con.js',
-                'resources/js/pages/basicinfo_con.js'
+                'resources/js/pages/basicinfo_con.js',
+                'resources/js/pages/envinfo_con.js',
+                'resources/js/pages/reg_con.js',
+                'resources/js/pages/user_con.js',
             ],
             refresh: true,
         }),

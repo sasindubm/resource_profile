@@ -26,23 +26,20 @@
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2 border">ඒකක ගණන</td>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        
-                                        
+                                        <x-editable-table-cell>0</x-editable-table-cell>
+                                        <x-editable-table-cell>0</x-editable-table-cell>
+                                        <x-editable-table-cell>0</x-editable-table-cell>
+                                        <x-editable-table-cell>0</x-editable-table-cell>
+                                        <x-editable-table-cell>0</x-editable-table-cell>
                                     </tr>
 
                                     <tr>
                                         <td class="px-4 py-2 border">පුජ්‍ය පක්ෂ සංඛ්‍යාව</td>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        <x-editable-table-cell> </x-editable-table-cell>
-                                        
+                                        <x-editable-table-cell>0</x-editable-table-cell>
+                                        <x-editable-table-cell>0</x-editable-table-cell>
+                                        <x-editable-table-cell>0</x-editable-table-cell>
+                                        <x-editable-table-cell>0</x-editable-table-cell>
+                                        <x-editable-table-cell>0</x-editable-table-cell>
                                     </tr>
                                 </thead>
                                 <tbody id="waterSourceTableBody">
@@ -65,18 +62,18 @@
                         class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
                         <div>
                             <div>
-                                <label for="school_name"
+                                <label for="rel_name"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">පුජනීය ස්ථානයේ
                                     නම:</label>
-                                <input type="text" id="school_name" name="school_name" required
+                                <input type="text" id="rel_name" name="rel_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             @csrf
 
                             <div>
-                                <label for="source_type"
+                                <label for="rel_type"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">වර්ගය:</label>
-                                <select id="source_type" name="source_type" required
+                                <select id="rel_type" name="rel_type" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                     <option value="" disabled selected>පුජනීය ස්ථාන වර්ගයක් තෝරන්න</option>
                                     <option value="ජාතික පාසල් ">විහාරස්ථාන </option>
@@ -94,10 +91,10 @@
                             </div><br>
 
                             <div>
-                                <label for="teacher_count"
+                                <label for="unique_count"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300"> සුවිශේෂි විමට
                                     හේතු:</label>
-                                <input type="text" id="teacher_count" name="teacher_count" required
+                                <input type="text" id="unique_count" name="unique_count" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
                             <button type="submit"
@@ -185,10 +182,10 @@
                         @csrf
 
                         <div>
-                            <label for="source_type"
+                            <label for="famous_type"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ප්‍රසිද්ධ කලා
                                 ක්ෂේත්‍රය:</label>
-                            <select id="source_type" name="source_type" required
+                            <select id="famous_type" name="famous_type" required
                                 class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                                 <option value="" disabled selected>ප්‍රසිද්ධ කලා ක්ෂේත්‍රය තෝරන්න</option>
                                 <option value="ජාතික පාසල් ">බලි තොව්ල් </option>
