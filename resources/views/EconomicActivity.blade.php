@@ -2,8 +2,7 @@
     <div class="py-6">
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">ආර්ථික කටයුතු</h2>
-                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">ඉඩම් පරිභෝගය හා කෘෂිකාර්මික තොරතුරු</h3>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">1. ඉඩම් පරිභෝගය හා කෘෂිකාර්මික තොරතුරු</h3>
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
@@ -130,16 +129,10 @@
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">වාණිජ මට්ටමින් බිම්මල් වගාව. ආරාක්ෂිත ගෘහ
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">2. වාණිජ මට්ටමින් බිම්මල් වගාව. ආරාක්ෂිත ගෘහ
                         තුල වගාව සිදු කරන පුද්ගලයින් සංඛාව </h2>
                     <div>
-                        <div>
-                            <label for="school_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
-                                අංකය</label>
-                            <input type="text" id="school_name" name="school_name" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                        </div><br>
-
+                        
                         <div>
                             <label for="source_type"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">වගාවේ නම:</label>
@@ -172,7 +165,6 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border"> අංකය </th>
                                 <th class="px-4 py-2 border"> වගාවේ නම </th>
                                 <th class="px-4 py-2 border"> පුද්ගලයින් ගණන </th>
 
@@ -189,16 +181,10 @@
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">ප්‍රදේශයට ආවේණික/ විශේෂිත ආර්ථික කටයුතු
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">3. ප්‍රදේශයට ආවේණික/ විශේෂිත ආර්ථික කටයුතු
                     </h2>
                     <div>
-                        <div>
-                            <label for="school_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
-                                අනු අංකය</label>
-                            <input type="text" id="school_name" name="school_name" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                        </div><br>
-
+                       
                         <div>
                             <label for="school_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 ආවේණික/ විශේෂිත ආර්ථික කටයුතු</label>
@@ -234,7 +220,6 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border"> අනු අංකය </th>
                                 <th class="px-4 py-2 border"> ආවේණික/ විශේෂිත ආර්ථික කටයුතු </th>
                                 <th class="px-4 py-2 border"> ආර්ථික කටයුත්තේ සවභාවය </th>
                                 <th class="px-4 py-2 border"> යොදාගන්නා ස්වභාවික සමිපත්/ අමුද්‍රව්‍ය</th>
@@ -252,15 +237,9 @@
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">ප්‍රදේශයට ආවේණික විශේෂිත බෝග වර්ග </h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">4. ප්‍රදේශයට ආවේණික විශේෂිත බෝග වර්ග </h2>
                     <div>
-                        <div>
-                            <label for="school_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
-                                අනු අංකය</label>
-                            <input type="text" id="school_name" name="school_name" required
-                                class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                        </div><br>
-
+                        
                         <div>
                             <label for="school_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 විශේෂිත බෝග වර්ග</label>
@@ -278,7 +257,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border"> අනු අංකය </th>
+                               
                                 <th class="px-4 py-2 border"> විශේෂිත බෝග වර්ග</th>
                             </tr>
                         </thead>
@@ -293,7 +272,7 @@
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">පුරන් කුඹුරු බිම් ප්‍රමාණය(පසුගිය අ‍වුරුදු
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">5. පුරන් කුඹුරු බිම් ප්‍රමාණය(පසුගිය අ‍වුරුදු
                         5 තුල වගා නොකල කුඹුරු) </h2>
                     <div>
                         <div>
@@ -359,7 +338,7 @@
 
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200"> කෘෂිකර්මාන්තයේ යෙදෙන පුද්ගලයින් සතු කෘෂි
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">6. කෘෂිකර්මාන්තයේ යෙදෙන පුද්ගලයින් සතු කෘෂි
                     උපකරන</h3>
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <table class="shadow-md border rounded-lg w-full">
@@ -483,7 +462,7 @@
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">වගා හානි පිළිබද තොරතුරු </h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">7. වගා හානි පිළිබද තොරතුරු </h2>
                     <div>
 
 
@@ -546,7 +525,7 @@
 
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> වාණිජ ම‍ට්ටමින් සත්ව පාලනයේ ‍යෙදෙන පවුල්වල තොරතුරු </h2>
+                <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">8. වාණිජ ම‍ට්ටමින් සත්ව පාලනයේ ‍යෙදෙන පවුල්වල තොරතුරු </h2>
 
                 <table class="shadow-md border rounded-lg w-full mb-5" border="1">
                     <tr>
@@ -585,7 +564,7 @@
 
          <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200"> කර්මාන්ත තොරතුරු කොට්ඨාසයේ පවතින කර්මාන්තශාලා </h3>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">9. කර්මාන්ත තොරතුරු කොට්ඨාසයේ පවතින කර්මාන්තශාලා </h3>
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
@@ -635,7 +614,7 @@
 
          <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">කරදිය ධීවර කර්මාන්ත </h3>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">10. කරදිය ධීවර කර්මාන්ත </h3>
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
@@ -683,7 +662,7 @@
          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">ක්‍රියාත්මක තත්වයේ පවතින කරදිය ධිවර සමිති</h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">11. ක්‍රියාත්මක තත්වයේ පවතින කරදිය ධිවර සමිති</h2>
                     <div>
                         <div>
                             <label for="source_type"
@@ -725,7 +704,7 @@
 
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">මිරිදිය ධීවර කර්මාන්ත </h3>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">12. මිරිදිය ධීවර කර්මාන්ත </h3>
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
@@ -772,7 +751,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">ක්‍රියාත්මක තත්වයේ පවතින මිරිදිය ධිවර සමිති</h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">13. ක්‍රියාත්මක තත්වයේ පවතින මිරිදිය ධිවර සමිති</h2>
                     <div>
                         <div>
                             <label for="source_type"
@@ -815,7 +794,7 @@
          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> මිරිදිය ධිවර කර්මාන්තය</h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">14. මිරිදිය ධිවර කර්මාන්තය</h2>
                     <div>
 
                        
@@ -853,7 +832,7 @@
 
         <div class="8 mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200"> හෝටල් ව්‍යාප්තිය </h3>
+                <h3 class="text-xl font-semibold mb-4 dark:text-gray-200">15. හෝටල් ව්‍යාප්තිය </h3>
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>

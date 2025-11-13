@@ -166,14 +166,7 @@
                     <div>
                         <div>
 
-                            <div>
-                                <label for="source_type"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                    අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
-                                    class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            </div><br>
-
+                            
                             <div>
                                 <label for="source_type"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාසලේ
@@ -215,7 +208,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border"> අනු අංකය </th>
+                               
                                 <th class="px-4 py-2 border"> පාසලේ නම </th>
                                 <th class="px-4 py-2 border"> වැසිගිය වර්ශය </th>
                                 <th class="px-4 py-2 border"> පවතින ගොඩනැගිලි සංඛ්‍යාව</th>
@@ -235,20 +228,13 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">පුද්ගලික පාසල් /
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">4. පුද්ගලික පාසල් /
                         ජාත්‍යන්තර
                         පාසල්-2025</h2>
                     <div>
                         <div>
 
-                            <div>
-                                <label for="source_type"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                    අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
-                                    class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            </div><br>
-
+                           
                             <div>
                                 <label for="source_type"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාසලේ
@@ -291,7 +277,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border">අනු අංකය</th>
+                                
                                 <th class="px-4 py-2 border">පාසලේ නම</th>
                                 <th class="px-4 py-2 border">ගුරුවරු ගණන</th>
                                 <th class="px-4 py-2 border">සිසුන් ගණන</th>
@@ -308,16 +294,10 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> පිරිවෙන් පිලිබඳ තොරතුරු </h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">5. පිරිවෙන් පිලිබඳ තොරතුරු </h2>
                     <div>
                         <div>
-                            <div>
-                                <label for="source_type"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                    අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
-                                    class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            </div><br>
+                            
 
                             <div>
                                 <label for="source_type"
@@ -375,7 +355,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border">අනු අංකය</th>
+                               
                                 <th class="px-4 py-2 border">පාසලේ නම</th>
                                 <th class="px-4 py-2 border">පිරිවෙන් වර්ගය</th>
                                 <th class="px-4 py-2 border">ගුරුවරු ගණන</th>
@@ -392,19 +372,12 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> කාර්මික හා වෘත්තීය පුහුණු ආයතන පිළිබඳ
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">6. කාර්මික හා වෘත්තීය පුහුණු ආයතන පිළිබඳ
                         තොරතුරු </h2>
                     <div>
                         <div>
 
-                            <div>
-                                <label for="source_type"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                    අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
-                                    class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            </div><br>
-
+                           
                             <div>
                                 <label for="source_type"
                                     class="block font-medium text-sm text-gray-700 dark:text-gray-300"> කාර්මික හා
@@ -427,7 +400,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border">අනු අංකය</th>
+                               
                                 <th class="px-4 py-2 border">කාර්මික හා වෘත්තීය පුහුණු ආයතන</th>
                             </tr>
                         </thead>
@@ -441,22 +414,15 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> පෙර පාසල් පිලිබඳ තොරතුරු </h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> 7. පෙර පාසල් පිලිබඳ තොරතුරු </h2>
                     <div>
                         <div>
 
-                            <div>
-                                <label for="source_type"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                    අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
-                                    class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            </div><br>
+                            
 
                             <div>
                                 <label for="source_type"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300"> පෙර පාසලේ නම සහ
-                                    ලිපිනය:</label>
+                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300"> පෙර පාසලේ නම සහ ලිපිනය:</label>
                                 <input type="text" id="source_name" name="source_name" required
                                     class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
                             </div><br>
@@ -493,8 +459,8 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border">අනු අංකය</th>
-                                <th class="px-4 py-2 border">කාර්මික හා වෘත්තීය පුහුණු ආයතන සහ අවිධිමත් ආයතන</th>
+                                
+                                <th class="px-4 py-2 border">පෙර පාසලේ නම සහ ලිපිනය</th>
                                 <th class="px-4 py-2 border">ගුරුවරු ගණන</th>
                                 <th class="px-4 py-2 border">සිසුන් ගණන</th>
                             </tr>
@@ -509,17 +475,11 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> දහම් පාසල් පිලිබඳ තොරතුරු </h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> 8. දහම් පාසල් පිලිබඳ තොරතුරු </h2>
                     <div>
                         <div>
 
-                            <div>
-                                <label for="source_type"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                    අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
-                                    class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            </div><br>
+                            
 
                             <div>
                                 <label for="source_type"
@@ -572,7 +532,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border">අනු අංකය</th>
+                                
                                 <th class="px-4 py-2 border">දහම් පාසලේ නම</th>
                                 <th class="px-4 py-2 border">දහම් පාසල අයත් ශාසනාරක්ෂක බල මණ්ඩලය </th>
                                 <th class="px-4 py-2 border">ගුරුවරු ගණන</th>
@@ -589,18 +549,12 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> උපකාරක පන්ති පවත්වන ආයතන පිලිබඳ තොරතුරු
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> 9. උපකාරක පන්ති පවත්වන ආයතන පිලිබඳ තොරතුරු
                     </h2>
                     <div>
                         <div>
 
-                            <div>
-                                <label for="source_type"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                    අංකය:</label>
-                                <input type="text" id="source_name" name="source_name" required
-                                    class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            </div><br>
+                            
 
                             <div>
                                 <label for="source_type"
@@ -624,7 +578,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border">අනු අංකය</th>
+                                
                                 <th class="px-4 py-2 border">උපකාරක පන්ති ආයතනයන්හි නම</th>
 
                             </tr>

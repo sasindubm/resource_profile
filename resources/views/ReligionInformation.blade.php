@@ -2,14 +2,15 @@
     <div class="py-6">
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div>
-                <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> ආගමික හා සංස්කෘතික කටයුතු</h2>
+                
                 <div>
-                    <h4 class="text-xl font-semibold mb-4 dark:text-gray-200">සියලුම ආගමික ස්ථාන සංඛ්‍යාව</h4>
+                    
                     <div>
 
                         <div>
                         </div>
                         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+                            <h4 class="text-xl font-semibold mb-4 dark:text-gray-200">1. සියලුම ආගමික ස්ථාන සංඛ්‍යාව</h4>
                             <table class="shadow-md border rounded-lg w-full">
                                 <thead>
                                     <tr>
@@ -25,20 +26,23 @@
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2 border">ඒකක ගණන</td>
-                                        <td class="px-4 py-2 border"></td>
-                                        <td class="px-4 py-2 border"> </td>
-                                        <td class="px-4 py-2 border"> </td>
-                                        <td class="px-4 py-2 border"> </td>
-                                        <td class="px-4 py-2 border"> </td>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        
+                                        
                                     </tr>
 
                                     <tr>
                                         <td class="px-4 py-2 border">පුජ්‍ය පක්ෂ සංඛ්‍යාව</td>
-                                        <td class="px-4 py-2 border"> </td>
-                                        <td class="px-4 py-2 border"> </td>
-                                        <td class="px-4 py-2 border"> </td>
-                                        <td class="px-4 py-2 border"> </td>
-                                        <td class="px-4 py-2 border"> </td>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        <x-editable-table-cell> </x-editable-table-cell>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody id="waterSourceTableBody">
@@ -55,7 +59,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
 
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">ප්‍රදේශයේ ඇති පුජනීය ස්ථානයන්හි තොරතුරු
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">2. ප්‍රදේශයේ ඇති පුජනීය ස්ථානයන්හි තොරතුරු
                     </h2>
                     <form action="" method="post"
                         class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
@@ -124,19 +128,13 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> කලායතන පිළිබද විස්තර</h2>
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">3. කලායතන පිළිබද විස්තර</h2>
                     <form action="" method="post"
                         class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
                         <form method="POST" action="">
                             @csrf
                             <div>
-                                <div>
-                                    <label for="art_center_number"
-                                        class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                        අංකය:</label>
-                                    <input type="text" id="art_center_number" name="art_center_number" required
-                                        class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                                </div><br>
+                               
                                 <div>
                                     <label for="art_center_name"
                                         class="block font-medium text-sm text-gray-700 dark:text-gray-300"> කලායතනයේ
@@ -163,7 +161,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border"> අනු අංකය </th>
+                                
                                 <th class="px-4 py-2 border"> කලායතනයේ නම </th>
                                 <th class="px-4 py-2 border"> සිසුන් ගණන </th>
                             </tr>
@@ -178,19 +176,11 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 mb-5">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200"> ප්‍රදේශයේ පවතින ප්‍රධාන සංස්කෘතිකාංග-
+                    <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">4. ප්‍රදේශයේ පවතින ප්‍රධාන සංස්කෘතිකාංග-
                         බිහිවු කළාකරුවන්/ කළා පරපුරවල් </h2>
                     <form action="" method="post"
                         class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                        <div>
-                            <div>
-                                <label for="school_name"
-                                    class="block font-medium text-sm text-gray-700 dark:text-gray-300">අනු
-                                    අංකය:</label>
-                                <input type="text" id="school_name" name="school_name" required
-                                    class="mt-1 block w-80 border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">
-                            </div>
-                        </div>
+                       
                         <br>
                         @csrf
 
@@ -226,7 +216,7 @@
                     <table class="shadow-md border rounded-lg w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border"> අනු අංකය </th>
+                                
                                 <th class="px-4 py-2 border"> ප්‍රසිද්ධ කලා ක්ෂේත්‍රය </th>
                                 <th class="px-4 py-2 border"> බිහිවූ කලාකරුවන් </th>
                             </tr>
