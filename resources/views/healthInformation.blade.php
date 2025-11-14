@@ -54,7 +54,7 @@
                             </tr>
 
                         </thead>
-                        <tbody id="healthSourceTableBody">
+                        <tbody class="text-center" id="healthSourceTableBody">
                         </tbody>
                     </table>
 
@@ -118,7 +118,7 @@
                                 <th class="px-4 py-2 border">රෝහල් වර්ගය</th>
                             </tr>
                         </thead>
-                        <tbody id="hospitalSourceTableBody">
+                        <tbody class="text-center" id="hospitalSourceTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -171,7 +171,7 @@
                                 <th class="px-4 py-2 border">රෝහල් ලිපිනය</th>
                             </tr>
                         </thead>
-                        <tbody id="privateHospitalTableBody">
+                        <tbody class="text-center" id="privateHospitalTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -225,7 +225,7 @@
                                 <th class="px-4 py-2 border">ලිපිනය</th>
                             </tr>
                         </thead>
-                        <tbody id="doctorSourceTableBody">
+                        <tbody class="text-center" id="doctorSourceTableBody">
                         </tbody>
                     </table>
                 </div>

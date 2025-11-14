@@ -48,7 +48,7 @@
                                 <th class="px-4 py-2 border">වර්ගය</th>
                             </tr>
                         </thead>
-                        <tbody id="waterSourceTableBody">
+                        <tbody class="text-center" id="waterSourceTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -96,7 +96,7 @@
                                 <th class="px-4 py-2 border">ස්ථානයේ/කලාපයේ වැදගත්කම</th>
                             </tr>
                         </thead>
-                        <tbody id="snzTableBody">
+                        <tbody class="text-center" id="snzTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -154,7 +154,7 @@
                         <th class="px-4 py-2 border">නිෂ්පාදනය කටයුත්තකට,සංවර්ධනයට යොදාගෙන තිබේද</th>
                     </tr>
                 </thead>
-                <tbody id="physicalSourceTableBody">
+                <tbody class="text-center" id="physicalSourceTableBody">
                 </tbody>
             </table>
         </div>
@@ -218,7 +218,7 @@
                             <th class="px-4 py-2 border">ගත යුතු පිළියම් යෝජනා</th>
                         </tr>
                     </thead>
-                    <tbody id="econSourceTableBody">
+                    <tbody class="text-center" id="econSourceTableBody">
                     </tbody>
                 </table>
             </div>
@@ -266,7 +266,7 @@
                             <th class="px-4 py-2 border">ලිපිනය</th>
                         </tr>
                     </thead>
-                    <tbody id="safePlaceTableBody">
+                    <tbody class="text-center" id="safePlaceTableBody">
                     </tbody>
                 </table>
             </div>
@@ -321,7 +321,7 @@
                             <th class="px-4 py-2 border">අයිතිය</th>
                         </tr>
                     </thead>
-                    <tbody id="touristTableBody">
+                    <tbody class="text-center" id="touristTableBody">
                     </tbody>
                 </table>
             </div>
