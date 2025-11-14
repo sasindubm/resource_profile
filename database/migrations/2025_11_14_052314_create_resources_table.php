@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('water_resources', function (Blueprint $table) {
-            $table->id('wr_id');
-            $table->string('wr_name');
-            $table->string('wr_type');
-            $table->string('normalized_name')->nullable()->index();
-            $table->unique(['normalized_name', 'wr_type']);
+        Schema::create('resources', function (Blueprint $table) {
+            $table->id('r_id');
+            $table->string('r_name');
+            $table->string('r_importance');
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('water_resources');
+        Schema::dropIfExists('resources');
     }
 };

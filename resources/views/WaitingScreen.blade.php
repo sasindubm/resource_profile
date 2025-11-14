@@ -47,7 +47,7 @@
                     <span class="dot"></span>
                 </div>
                 <h1 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">Please Wait...</h1>
-                <p class="text-gray-600 dark:text-gray-400">Your Registration Request is being reviewed by the Administrator</p>
+                <p class="text-gray-600 dark:text-gray-400 mb-2">Your Registration Request is being reviewed. Contact System Administrator 0770109123</p>
                 <a href="{{ route('home') }}" class="mt-4 pt-4 pb-2 underline">Go to Home Page</a>
             </div>
         </div>

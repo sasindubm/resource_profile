@@ -13,7 +13,7 @@
                             <label for="wr_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">ජල
                                 මුලාශ්‍ර නම:</label>
 
-                            <x-text-input type="text" id="wr_name" name="wr_name" required/>
+                            <x-text-input type="text" id="wr_name" name="wr_name" required />
                         </div>
 
 
@@ -67,7 +67,7 @@
                             <label for="snz_name"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">කලාප/ස්ථාන නම
                                 :</label>
-                            <x-text-input type="text" id="snz_name" name="snz_name" required/>
+                            <x-text-input type="text" id="snz_name" name="snz_name" required />
                         </div>
 
                         <div class="mb-6">
@@ -75,7 +75,7 @@
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ස්ථානයේ/කලාපයේ
                                 වැදගත්කම
                                 :</label>
-                            <x-text-input type="text" id="snz_importance" name="snz_importance" required/>
+                            <x-text-input type="text" id="snz_importance" name="snz_importance" required />
                         </div>
 
                         <br>
@@ -108,40 +108,36 @@
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">3 ප්‍රදේශයේ පවතින භෞතික සම්පත්</h2>
-                <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                    <form id="physicalSourceForm" class="space-y-4">
-                        @csrf
+                <form id="resourceForm" action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
+                    @csrf
 
+                    <div class="mb-6">
+                        <label for="r_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
+                            භෞතික සම්පත් නම:</label>
+                        <x-text-input type="text" id="r_name" name="r_name" required />
+                    </div>
+                    <div class="mb-6">
+                        <label for="r_importance" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
+                            එහි වැදගත්කම:</label>
+                        <x-text-input type="text" id="r_importance" name="r_importance" required />
+                    </div>
+                    <div class="mb-6">
+                        <label class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">නිෂ්පාදන
+                            කටයුත්තකට,සංවර්ධනයට යොදාගෙන තිබේද?:</label>
                         <div class="mb-6">
-                            <label for="physical_name" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
-                                භෞතික සම්පත් නම:</label>
-                            <x-text-input type="text" id="physical_name" name="physical_name" required/>
-                        </div>
-
-                        <div class="mb-6">
-                            <label class="block font-medium text-sm text-gray-700 dark:text-gray-300 mb-2">නිෂ්පාදන
-                                කටයුත්තකට,සංවර්ධනයට යොදාගෙන තිබේද?:</label>
-
-                            <div class="mb-6">
-
-                                <div class="mt-2">
-                                    <label class="inline-flex items-center">
-                                        <input type="radio" class="form-radio" name="radio_option" value="yes">
-                                        <span class="ml-2">ඇත</span>
-                                    </label>
-                                    <label class="inline-flex items-center ml-8">
-                                        <input type="radio" class="form-radio" name="radio_option" value="no">
-                                        <span class="ml-2">නැත</span>
-                                    </label>
-                                </div>
+                            <div class="mt-2">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" class="form-radio" name="r_radio" value="ඔව්">
+                                    <span class="ml-2">ඔව්</span>
+                                </label>
+                                <label class="inline-flex items-center ml-8">
+                                    <input type="radio" class="form-radio" name="r_radio" value="නැත">
+                                    <span class="ml-2">නැත</span>
+                                </label>
                             </div>
-
-
-
-                            <br>
-                            <x-primary-button>insert</x-primary-button>
-                            <x-input-error :messages="$errors->all()" />
-                    </form>
+                        </div>
+                        <x-primary-button>insert</x-primary-button>
+                        <x-input-error :messages="$errors->all()" />
                 </form>
             </div>
         </div>
@@ -149,12 +145,14 @@
             <table class="shadow-md border rounded-lg w-full">
                 <thead>
                     <tr>
+                        <th class="px-4 py-2 border"></th>
                         <th class="px-4 py-2 border">ID</th>
                         <th class="px-4 py-2 border">භෞතික සම්පත් නම</th>
+                        <th class="px-4 py-2 border">එහි වැදගත්කම</th>
                         <th class="px-4 py-2 border">නිෂ්පාදනය කටයුත්තකට,සංවර්ධනයට යොදාගෙන තිබේද</th>
                     </tr>
                 </thead>
-                <tbody class="text-center" id="physicalSourceTableBody">
+                <tbody class="text-center" id="resourceTableBody">
                 </tbody>
             </table>
         </div>
@@ -191,12 +189,12 @@
                             <label for="econ_time"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ඇත්නම් බහුලව සිදුවන
                                 කාලසීමාව:</label>
-                            <x-text-input type="text" id="econ_time" name="econ_time" required/>
+                            <x-text-input type="text" id="econ_time" name="econ_time" required />
                         </div>
                         <div class="mb-6">
                             <label for="suggession"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ගැටළුව සඳහා ගත යුතු පිළියම් යෝජනා :</label>
-                            <x-text-input type="text" id="suggession" name="suggession" required/>
+                            <x-text-input type="text" id="suggession" name="suggession" required />
                         </div>
 
                         <br>
@@ -237,14 +235,14 @@
                             <label for="safe_place_name"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ආරක්ෂිත ස්ථානයේ නම
                                 :</label>
-                            <x-text-input type="text" id="safe_place_name" name="safe_place_name" required/>
+                            <x-text-input type="text" id="safe_place_name" name="safe_place_name" required />
                         </div>
 
                         <div class="mb-6">
                             <label for="safe_place_address"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ලිපිනය
                                 :</label>
-                            <x-text-input type="text" id="safe_place_address" name="safe_place_address" required/>
+                            <x-text-input type="text" id="safe_place_address" name="safe_place_address" required />
                         </div>
 
 
@@ -285,21 +283,21 @@
                             <label for="tourist_place"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300"> ස්ථානයේ නම
                                 :</label>
-                            <x-text-input type="text" id="tourist_place" name="tourist_place" required/>
+                            <x-text-input type="text" id="tourist_place" name="tourist_place" required />
                         </div>
 
                         <div class="mb-6">
                             <label for="attaction"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">ආකර්ශනය ඇතිවීමට හේතුව/ස්ථානයේ විශේෂත්වය
                                 :</label>
-                            <x-text-input type="text" id="attaction" name="attaction" required/>
+                            <x-text-input type="text" id="attaction" name="attaction" required />
                         </div>
 
                         <div class="mb-6">
                             <label for="right"
                                 class="block font-medium text-sm text-gray-700 dark:text-gray-300">අයිතිය
                                 :</label>
-                            <x-text-input type="text" id="right" name="right" required/>
+                            <x-text-input type="text" id="right" name="right" required />
                         </div>
 
 

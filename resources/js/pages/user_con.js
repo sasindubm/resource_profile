@@ -56,5 +56,35 @@ document.addEventListener('DOMContentLoaded', function () {
 				});
 		}
 	});
+
+	document.getElementById('allDeny').addEventListener('click', function () {
+		fetch('/api/deny-all', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+			}
+		})
+			.then(res => res.json())
+			.then(data => {
+				alert('All users are Denied');
+				fetchUsers();
+			})
+	});
+
+	document.getElementById('allApprove').addEventListener('click', function () {
+		fetch('/api/approve-all', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+			}
+		})
+			.then(res => res.json())
+			.then(data => {
+				alert('All users are Approved');
+				fetchUsers();
+			})
+	});
 });
 

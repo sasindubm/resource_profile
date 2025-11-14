@@ -171,4 +171,83 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    function fetchResources() {
+        fetch(`/api/get-resources/${gndUid}`, {
+            headers: csrfHeaders,
+        })
+            .then(res => res.json())
+            .then(data => {
+                let rList = '';
+                data.forEach((item, index) => {
+                    rList += `
+                        <tr>
+                            <td class="border px-3 py-1 text-center">
+                                            <button class="px-2 py-0 mb-2 border rounded-lg bg-gray-200 edit-btn text-blue-600 hover:underline" data-id="${item.r_id}">Edit</button>
+                                            <button class="px-2 py-0 mb-1 border rounded-lg bg-gray-200 delete-btn text-red-600 hover:underline ml-4" data-id="${item.r_id}">Delete</button>
+                                        </td>
+                            <td class="px-6 py-6 border text-center">${index + 1}</td>
+                            <td class="px-6 py-6 border text-center">${item.r_name}</td>
+                            <td class="px-6 py-6 border text-center">${item.r_importance}</td>
+                            <td class="px-6 py-6 border text-center">${item.r_is_used}</td> 
+                        </tr>
+                    `;
+                });
+                document.getElementById('resourceTableBody').innerHTML = rList;
+            })
+            .catch(error => {
+                console.log(data);
+                console.error('Error:', error);
+            });
+    }
+
+    fetchResources();
+
+    document.getElementById('resourceForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        formData.append('gnd_uid', gndUid);
+        formData.append('r_name', document.getElementById('r_name').value);
+        formData.append('r_importance', document.getElementById('r_importance').value);
+        formData.append('r_is_used', document.querySelector('input[name="r_radio"]:checked').value);
+
+        fetch(`/api/insert-resource/${gndUid}`, {
+            method: 'POST',
+            headers: csrfHeaders,
+            body: formData
+        })
+            .then(res => res.json())
+            .then(data => {
+                alert('Resource information saved successfully!');
+                this.reset();
+                fetchResources();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while saving resource information.');
+            });
+    });
+
+    document.getElementById('resourceTableBody').addEventListener('click', function (event) {
+          if (event.target.classList.contains('delete-btn')) {
+            const rId = event.target.dataset.id;
+
+            if (confirm('Are you sure you want to delete this Resource?')) {
+                fetch(`/api/delete-resource/${rId}`, {
+                    method: 'DELETE',
+                    headers: csrfHeaders
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        alert('Resource deleted successfully!');
+                        fetchResources();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred while deleting the Resource.');
+                    });
+            }
+        }      
+    })
 });

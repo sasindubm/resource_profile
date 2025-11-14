@@ -8,12 +8,21 @@ use App\Http\Controllers\AbondenedBuildingController;
 use App\Http\Controllers\AbondenedProjectController;
 use App\Http\Controllers\WaterResourceController;
 use App\Http\Controllers\SNZController;
+use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\Admin\UserManagementController;
 
 //Register API routes for fetching location and basic info names
 Route::get('/api/ds-by-district/{d_code}', [LocationController::class, 'getDS']);
 Route::get('/api/gnd-by-ds/{ds_id}', [LocationController::class, 'getGND']);
 
 Route::middleware('auth')->group(function () {
+    //Admin routes
+    Route::get('/api/get-users', [UserManagementController::class, 'index']);
+    Route::post('/api/apr-user/{user}', [UserManagementController::class, 'approve']);
+    Route::post('/api/rej-user/{user}', [UserManagementController::class, 'reject']);
+    Route::post('/api/deny-all', [UserManagementController::class, 'denyAll']);
+    Route::post('/api/approve-all', [UserManagementController::class, 'approveAll']);
+
     //Dashboard info routes
     Route::get('/api/gnd-by-uid/{gnd_uid}', [BasicInfoController::class, 'getGNDName']);
     Route::get('/api/ds-by-gnd/{gnd_uid}', [BasicInfoController::class, 'getDSNameByGND']);
@@ -46,8 +55,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/api/get-snz/{gnd_uid}', [SNZController::class, 'getSNZ']);
     Route::post('/api/insert-snz/{gnd_uid}', [SNZController::class, 'insertSNZ']);
     Route::delete('/api/delete-snz/{snz_id}', [SNZController::class, 'deleteSNZ']);
-});
 
-Route::get('/api/get-users', [App\Http\Controllers\Admin\UserManagementController::class, 'index']);
-Route::post('/api/apr-user/{user}', [App\Http\Controllers\Admin\UserManagementController::class, 'approve']);
-Route::post('/api/rej-user/{user}', [App\Http\Controllers\Admin\UserManagementController::class, 'reject']);
+    //Resource Routes
+    Route::get('/api/get-resources/{gnd_uid}', [ResourceController::class, 'getResources']);
+    Route::post('/api/insert-resource/{gnd_uid}', [ResourceController::class, 'insertResource']);
+    Route::delete('/api/delete-resource/{gnd_uid}', [ResourceController::class, 'deleteResource']);
+});
