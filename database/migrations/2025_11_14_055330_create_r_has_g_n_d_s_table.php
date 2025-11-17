@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('r_has_g_n_d_s', function (Blueprint $table) {
             $table->unsignedBigInteger('r_id');
             $table->string('gnd_uid');
+            $table->string('r_importance');
             $table->string('r_is_used');
             $table->primary(['r_id', 'gnd_uid']);
             $table->foreign('r_id')->references('r_id')->on('resources')->onDelete('cascade');

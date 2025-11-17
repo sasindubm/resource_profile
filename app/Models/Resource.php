@@ -8,6 +8,6 @@ class Resource extends Model
 {
     protected $fillable = [
         'r_name',
-        'r_importance',
+        'normalized_name',
     ];
 }

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('resources', function (Blueprint $table) {
             $table->id('r_id');
             $table->string('r_name');
-            $table->string('r_importance');
+            $table->string('normalized_name')->unique();
             $table->timestamps();
         });
     }

@@ -9,6 +9,7 @@ class RHasGND extends Model
     protected $fillable = [
         'r_id',
         'gnd_uid',
+        'r_importance',
         'r_is_used'
     ];
 }

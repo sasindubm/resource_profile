@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert('Resource information saved successfully!');
+                alert(data.message);
                 this.reset();
                 fetchResources();
             })
