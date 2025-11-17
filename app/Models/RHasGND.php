@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WaterResource extends Model
+class RHasGND extends Model
 {
     protected $fillable = [
-        'wr_name',
-        'wr_type',
-        'normalized_name',
+        'r_id',
+        'gnd_uid',
+        'r_is_used'
     ];
 }

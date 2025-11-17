@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('abondened_government_buildings', function (Blueprint $table) {
-            $table->id('ab_id');
-            $table->string('ab_name');
-            $table->string('ab_used_for');
-            $table->string('ab_is_retrievable');
+        Schema::create('r_has_g_n_d_s', function (Blueprint $table) {
+            $table->unsignedBigInteger('r_id');
             $table->string('gnd_uid');
+            $table->string('r_is_used');
+            $table->primary(['r_id', 'gnd_uid']);
+            $table->foreign('r_id')->references('r_id')->on('resources')->onDelete('cascade');
             $table->foreign('gnd_uid')->references('gnd_uid')->on('grama_niladari_divisions')->onDelete('cascade');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('abondened_government_buildings');
+        Schema::dropIfExists('r_has_g_n_d_s');
     }
 };

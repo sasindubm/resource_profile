@@ -44,7 +44,7 @@
                                     <th class="px-6 py-3 border">ලිපිනය</th>
                                 </tr>
                             </thead>
-                            <tbody id="govFigTable">
+                            <tbody class="text-center" id="govFigTable">
                             </tbody>
                         </table>
                     </div>
@@ -96,7 +96,7 @@
                                     <th class="px-6 py-3 border">නැවත භාවිතයට ගත හැකිද?</th>
                                 </tr>
                             </thead>
-                            <tbody id="AbFigTable">
+                            <tbody class="text-center" id="AbFigTable">
                             </tbody>
                         </table>
                     </div>
@@ -134,7 +134,7 @@
                                     <th class="px-6 py-3 border">නවතා දැමීමට හේතුව</th>
                                 </tr>
                             </thead>
-                            <tbody id="APBody">
+                            <tbody class="text-center" id="APBody">
                             </tbody>
                         </table>
                     </div>

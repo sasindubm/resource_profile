@@ -170,7 +170,7 @@
                                     පුද්ගලයින් ගණන</th>
                             </tr>
                         </thead>
-                        <tbody id="populationSourceTableBody">
+                        <tbody class="text-center" id="populationSourceTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -226,7 +226,7 @@
                                 <th class="px-4 py-2 border">කාන්තා ගෘහමූලික පවුල් සංඛ්‍යාව/ගෘහ කාණ්ඩ සංඛ්‍යාව</th>
                             </tr>
                         </thead>
-                        <tbody id="homeSourceTableBody">
+                        <tbody class="text-center" id="homeSourceTableBody">
                         </tbody>
                     </table>
                 </div>
