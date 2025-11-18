@@ -49,15 +49,15 @@ Route::middleware('auth')->group(function () {
     //Water Sources routes
     Route::post('/api/insert-wr/{gnd_uid}', [WaterResourceController::class, 'insertWaterResource']);
     Route::get('/api/get-wr/{gnd_uid}', [WaterResourceController::class, 'getWaterResources']);
-    Route::delete('/api/delete-wr/{wr_id}', [WaterResourceController::class, 'deleteWaterResource']);
+    Route::delete('/api/delete-wr/{wr_id}/{gnd_uid}', [WaterResourceController::class, 'deleteWaterResource']);
 
     //SNZ routes
     Route::get('/api/get-snz/{gnd_uid}', [SNZController::class, 'getSNZ']);
     Route::post('/api/insert-snz/{gnd_uid}', [SNZController::class, 'insertSNZ']);
-    Route::delete('/api/delete-snz/{snz_id}', [SNZController::class, 'deleteSNZ']);
+    Route::delete('/api/delete-snz/{snz_id}/{gnd_uid}', [SNZController::class, 'deleteSNZ']);
 
     //Resource Routes
     Route::get('/api/get-resources/{gnd_uid}', [ResourceController::class, 'getResources']);
     Route::post('/api/insert-resource/{gnd_uid}', [ResourceController::class, 'insertResource']);
-    Route::delete('/api/delete-resource/{gnd_uid}', [ResourceController::class, 'deleteResource']);
+    Route::delete('/api/delete-resource/{r_id}/{gnd_uid}', [ResourceController::class, 'deleteResource']);
 });

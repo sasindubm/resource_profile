@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gndUid = document.body.dataset.gndUid;
 
-    // Helper function to get the CSRF token
     function getCsrfToken() {
         return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     }
@@ -10,13 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'X-CSRF-TOKEN': getCsrfToken()
     };
 
-    //--- Water Source Section ---
+    //==============================
+    // WATER SOURCE SECTION
+    //==============================
 
     function fetchWaterSources() {
-
-        fetch(`/api/get-wr/${gndUid}`, {
-            headers: csrfHeaders
-        })
+        fetch(`/api/get-wr/${gndUid}`, { headers: csrfHeaders })
             .then(res => res.json())
             .then(data => {
                 let wsBody = '';
@@ -24,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     wsBody += `
                         <tr>
                             <td class="border px-3 py-1 text-center">
-                                            <button class="px-2 py-0 mb-2 border rounded-lg bg-gray-200 edit-btn text-blue-600 hover:underline" data-id="${item.wr_id}">Edit</button>
-                                            <button class="px-2 py-0 mb-1 border rounded-lg bg-gray-200 delete-btn text-red-600 hover:underline ml-4" data-id="${item.wr_id}">Delete</button>
-                                        </td>
+                                <button class="px-2 py-0 mb-2 border rounded bg-gray-200 edit-btn text-blue-600 hover:underline" data-id="${item.wr_id}">Edit</button>
+                                <button class="px-2 py-0 mb-1 border rounded bg-gray-200 delete-btn text-red-600 hover:underline ml-4" data-id="${item.wr_id}">Delete</button>
+                            </td>
                             <td class="px-6 py-6 border text-center">${index + 1}</td>
                             <td class="px-6 py-6 border text-center">${item.wr_name}</td>
                             <td class="px-6 py-6 border text-center">${item.wr_type}</td>
@@ -36,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('waterSourceTableBody').innerHTML = wsBody;
             })
             .catch(error => {
-                console.error('Error fetching water sources:', error);
+                Swal.fire('Error', 'Error fetching water sources.', 'error');
             });
     }
 
@@ -57,46 +55,47 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert('Water source information saved successfully!');
+                Swal.fire(data.success ? 'Success' : 'Error', data.message || data.error, data.success ? 'success' : 'error');
                 this.reset();
                 fetchWaterSources();
             })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred while saving water source information.');
-            });
+            .catch(() => Swal.fire('Error', 'Could not save water source.', 'error'));
     });
 
     document.getElementById('waterSourceTableBody').addEventListener('click', function (event) {
         if (event.target.classList.contains('delete-btn')) {
             const wsId = event.target.dataset.id;
 
-            if (confirm('Are you sure you want to delete this water source?')) {
-                fetch(`/api/delete-wr/${wsId}`, {
-                    method: 'DELETE',
-
-                    headers: csrfHeaders
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        alert('Water source deleted successfully!');
-                        fetchWaterSources();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Delete the water source link?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete',
+                cancelButtonText: 'Cancel'
+            }).then(result => {
+                if (result.isConfirmed) {
+                    fetch(`/api/delete-wr/${wsId}/${gndUid}`, {
+                        method: 'DELETE',
+                        headers: csrfHeaders
                     })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('An error occurred while deleting the water source.');
-                    });
-            }
+                        .then(res => res.json())
+                        .then(data => {
+                            Swal.fire('Deleted!', data.message, 'success');
+                            fetchWaterSources();
+                        })
+                        .catch(() => Swal.fire('Error', 'Could not delete water source.', 'error'));
+                }
+            });
         }
     });
 
-    //--- SNZ Section ---
+    //==============================
+    // SNZ SECTION
+    //==============================
 
     function fetchSNZs() {
-
-        fetch(`/api/get-snz/${gndUid}`, {
-            headers: csrfHeaders
-        })
+        fetch(`/api/get-snz/${gndUid}`, { headers: csrfHeaders })
             .then(res => res.json())
             .then(data => {
                 let snzBody = '';
@@ -104,9 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     snzBody += `
                         <tr>
                             <td class="border px-3 py-1 text-center">
-                                            <button class="px-2 py-0 mb-2 border rounded-lg bg-gray-200 edit-btn text-blue-600 hover:underline" data-id="${item.snz_id}">Edit</button>
-                                            <button class="px-2 py-0 mb-1 border rounded-lg bg-gray-200 delete-btn text-red-600 hover:underline ml-4" data-id="${item.snz_id}">Delete</button>
-                                        </td>
+                                <button class="px-2 py-0 mb-2 border rounded bg-gray-200 edit-btn text-blue-600 hover:underline" data-id="${item.snz_id}">Edit</button>
+                                <button class="px-2 py-0 mb-1 border rounded bg-gray-200 delete-btn text-red-600 hover:underline ml-4" data-id="${item.snz_id}">Delete</button>
+                            </td>
                             <td class="px-6 py-6 border text-center">${index + 1}</td>
                             <td class="px-6 py-6 border text-center">${item.snz_name}</td>
                             <td class="px-6 py-6 border text-center">${item.snz_importance}</td>
@@ -115,9 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 document.getElementById('snzTableBody').innerHTML = snzBody;
             })
-            .catch(error => {
-                console.error('Error fetching SNZs:', error);
-            });
+            .catch(() => Swal.fire('Error', 'Error fetching SNZs.', 'error'));
     }
 
     fetchSNZs();
@@ -137,45 +134,47 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.success) {
-                    alert(data.message);
-                } else {
-                    alert('Error: ' + data.error);
-                }
+                Swal.fire(data.success ? 'Success' : 'Error', data.message || data.error, data.success ? 'success' : 'error');
                 this.reset();
                 fetchSNZs();
             })
-            .catch(error => {
-                alert('Error:', error);
-            });
+            .catch(() => Swal.fire('Error', 'Could not save SNZ.', 'error'));
     });
 
     document.getElementById('snzTableBody').addEventListener('click', function (event) {
         if (event.target.classList.contains('delete-btn')) {
             const snzId = event.target.dataset.id;
 
-            if (confirm('Are you sure you want to delete this Sensitive Nature Zone?')) {
-                fetch(`/api/delete-snz/${snzId}`, {
-                    method: 'DELETE',
-                    headers: csrfHeaders
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        alert('Sensitive Nature Zone deleted successfully!');
-                        fetchSNZs();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Delete the Sensitive Nature Zone link?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete',
+                cancelButtonText: 'Cancel'
+            }).then(result => {
+                if (result.isConfirmed) {
+                    fetch(`/api/delete-snz/${snzId}/${gndUid}`, {
+                        method: 'DELETE',
+                        headers: csrfHeaders
                     })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('An error occurred while deleting the Sensitive Nature Zone.');
-                    });
-            }
+                        .then(res => res.json())
+                        .then(data => {
+                            Swal.fire('Deleted', data.message, 'success');
+                            fetchSNZs();
+                        })
+                        .catch(() => Swal.fire('Error', 'Could not delete SNZ.', 'error'));
+                }
+            });
         }
     });
 
+    //==============================
+    // RESOURCE SECTION
+    //==============================
+
     function fetchResources() {
-        fetch(`/api/get-resources/${gndUid}`, {
-            headers: csrfHeaders,
-        })
+        fetch(`/api/get-resources/${gndUid}`, { headers: csrfHeaders })
             .then(res => res.json())
             .then(data => {
                 let rList = '';
@@ -183,22 +182,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     rList += `
                         <tr>
                             <td class="border px-3 py-1 text-center">
-                                            <button class="px-2 py-0 mb-2 border rounded-lg bg-gray-200 edit-btn text-blue-600 hover:underline" data-id="${item.r_id}">Edit</button>
-                                            <button class="px-2 py-0 mb-1 border rounded-lg bg-gray-200 delete-btn text-red-600 hover:underline ml-4" data-id="${item.r_id}">Delete</button>
-                                        </td>
+                                <button class="px-2 py-0 mb-2 border rounded bg-gray-200 edit-btn text-blue-600 hover:underline" data-id="${item.r_id}">Edit</button>
+                                <button class="px-2 py-0 mb-1 border rounded bg-gray-200 delete-btn text-red-600 hover:underline ml-4" data-id="${item.r_id}">Delete</button>
+                            </td>
                             <td class="px-6 py-6 border text-center">${index + 1}</td>
                             <td class="px-6 py-6 border text-center">${item.r_name}</td>
                             <td class="px-6 py-6 border text-center">${item.r_importance}</td>
-                            <td class="px-6 py-6 border text-center">${item.r_is_used}</td> 
+                            <td class="px-6 py-6 border text-center">${item.r_is_used}</td>
                         </tr>
                     `;
                 });
                 document.getElementById('resourceTableBody').innerHTML = rList;
             })
-            .catch(error => {
-                console.log(data);
-                console.error('Error:', error);
-            });
+            .catch(() => Swal.fire('Error', 'Error fetching resources.', 'error'));
     }
 
     fetchResources();
@@ -219,35 +215,39 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert(data.message);
+                Swal.fire('Success', data.message, 'success');
                 this.reset();
                 fetchResources();
             })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred while saving resource information.');
-            });
+            .catch(() => Swal.fire('Error', 'Could not save resource.', 'error'));
     });
 
     document.getElementById('resourceTableBody').addEventListener('click', function (event) {
-          if (event.target.classList.contains('delete-btn')) {
+        if (event.target.classList.contains('delete-btn')) {
             const rId = event.target.dataset.id;
 
-            if (confirm('Are you sure you want to delete this Resource?')) {
-                fetch(`/api/delete-resource/${rId}`, {
-                    method: 'DELETE',
-                    headers: csrfHeaders
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        alert('Resource deleted successfully!');
-                        fetchResources();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Delete the resource link?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete',
+                cancelButtonText: 'Cancel'
+            }).then(result => {
+                if (result.isConfirmed) {
+                    fetch(`/api/delete-resource/${rId}/${gndUid}`, {
+                        method: 'DELETE',
+                        headers: csrfHeaders
                     })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('An error occurred while deleting the Resource.');
-                    });
-            }
-        }      
-    })
+                        .then(res => res.json())
+                        .then(data => {
+                            Swal.fire('Deleted!', data.message, 'success');
+                            fetchResources();
+                        })
+                        .catch(() => Swal.fire('Error', 'Could not delete resource.', 'error'));
+                }
+            });
+        }
+    });
+
 });

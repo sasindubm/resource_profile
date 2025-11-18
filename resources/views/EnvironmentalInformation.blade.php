@@ -164,43 +164,39 @@
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">4 පාරිසරික ගැටළු හා ආපදාවන් </h2>
-                <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                    <form id="econSourceForm" class="space-y-4">
-                        @csrf
+                <form id="econSourceForm" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
+                    @csrf
+                    <div class="mb-6">
+                        <label for="econ_problem"
+                            class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාරිසරික ගැටළුව:</label>
+                        <select id="econ_problem" name="econ_problem" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" required>
+                            <option value="" disabled selected>ගැටළුව තෝරන්න</option>
+                            <option value="ගංවතුර">ගංවතුර</option>
+                            <option value="නියඟය">නියඟය</option>
+                            <option value="නායයෑම්">නායයෑම්</option>
+                            <option value="වන විනාශය">වන විනාශය</option>
+                            <option value="ජල මූලාශ්‍ර සිඳී යාම">ජල මූලාශ්‍ර සිඳී යාම</option>
+                            <option value="අක්‍රමවත් පහත් බිම් ගොඩ කිරීම">අක්‍රමවත් පහත් බිම් ගොඩ කිරීම</option>
+                            <option value="කැලිකසළ">කැලිකසළ</option>
+                            <option value="වන අලි">වන අලි</option>
+                            <option value="වෙනත්">වෙනත්</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label for="econ_time"
+                            class="block font-medium text-sm text-gray-700 dark:text-gray-300">ඇත්නම් බහුලව සිදුවන
+                            කාලසීමාව:</label>
+                        <x-text-input type="text" id="econ_time" name="econ_time" required />
+                    </div>
+                    <div class="mb-6">
+                        <label for="suggession"
+                            class="block font-medium text-sm text-gray-700 dark:text-gray-300">ගැටළුව සඳහා ගත යුතු පිළියම් යෝජනා :</label>
+                        <x-text-input type="text" id="suggession" name="suggession" required />
+                    </div>
 
-
-                        <div class="mb-6">
-                            <label for="econ_problem"
-                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">පාරිසරික ගැටළුව:</label>
-                            <select id="econ_problem" name="econ_problem" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" required>
-                                <option value="" disabled selected>ගැටළුව තෝරන්න</option>
-                                <option value="ගංවතුර">ගංවතුර</option>
-                                <option value="නියඟය">නියඟය</option>
-                                <option value="නායයෑම්">නායයෑම්</option>
-                                <option value="වන විනාශය">වන විනාශය</option>
-                                <option value="ජල මූලාශ්‍ර සිඳී යාම">ජල මූලාශ්‍ර සිඳී යාම</option>
-                                <option value="අක්‍රමවත් පහත් බිම් ගොඩ කිරීම">අක්‍රමවත් පහත් බිම් ගොඩ කිරීම</option>
-                                <option value="කැලිකසළ">කැලිකසළ</option>
-                                <option value="වන අලි">වන අලි</option>
-                                <option value="වෙනත්">වෙනත්</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label for="econ_time"
-                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ඇත්නම් බහුලව සිදුවන
-                                කාලසීමාව:</label>
-                            <x-text-input type="text" id="econ_time" name="econ_time" required />
-                        </div>
-                        <div class="mb-6">
-                            <label for="suggession"
-                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ගැටළුව සඳහා ගත යුතු පිළියම් යෝජනා :</label>
-                            <x-text-input type="text" id="suggession" name="suggession" required />
-                        </div>
-
-                        <br>
-                        <x-primary-button>insert</x-primary-button>
-                        <x-input-error :messages="$errors->all()" />
-                    </form>
+                    <br>
+                    <x-primary-button>insert</x-primary-button>
+                    <x-input-error :messages="$errors->all()" />
                 </form>
             </div>
 
@@ -227,30 +223,25 @@
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">5 හදිසි ආපදා අවස්ථාවකදී හඳුනාගත් ආරක්ෂිත ස්ථාන</h2>
-                <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                    <form id="emergencySourceForm" class="space-y-4">
-                        @csrf
+                <form id="emergencySourceForm" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
+                    @csrf
 
-                        <div class="mb-6">
-                            <label for="safe_place_name"
-                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ආරක්ෂිත ස්ථානයේ නම
-                                :</label>
-                            <x-text-input type="text" id="safe_place_name" name="safe_place_name" required />
-                        </div>
+                    <div class="mb-6">
+                        <label for="safe_place_name"
+                            class="block font-medium text-sm text-gray-700 dark:text-gray-300">ආරක්ෂිත ස්ථානයේ නම
+                            :</label>
+                        <x-text-input type="text" id="safe_place_name" name="safe_place_name" required />
+                    </div>
 
-                        <div class="mb-6">
-                            <label for="safe_place_address"
-                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ලිපිනය
-                                :</label>
-                            <x-text-input type="text" id="safe_place_address" name="safe_place_address" required />
-                        </div>
-
-
-
-                        <br>
-                        <x-primary-button>insert</x-primary-button>
-                        <x-input-error :messages="$errors->all()" />
-                    </form>
+                    <div class="mb-6">
+                        <label for="safe_place_address"
+                            class="block font-medium text-sm text-gray-700 dark:text-gray-300">ලිපිනය
+                            :</label>
+                        <x-text-input type="text" id="safe_place_address" name="safe_place_address" required />
+                    </div>
+                    <br>
+                    <x-primary-button>insert</x-primary-button>
+                    <x-input-error :messages="$errors->all()" />
                 </form>
             </div>
 
@@ -275,36 +266,34 @@
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <h2 class="text-xl font-semibold mb-4 dark:text-gray-200">6 සංචාරක ආකර්ශනය සහිත ප්‍රදේශ</h2>
-                <form action="" method="post" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
-                    <form id="touristSourceForm" class="space-y-4">
-                        @csrf
+                <form id="touristSourceForm" class="max-w-2xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-md rounded-md text-left">
+                    @csrf
 
-                        <div class="mb-6">
-                            <label for="tourist_place"
-                                class="block font-medium text-sm text-gray-700 dark:text-gray-300"> ස්ථානයේ නම
-                                :</label>
-                            <x-text-input type="text" id="tourist_place" name="tourist_place" required />
-                        </div>
+                    <div class="mb-6">
+                        <label for="tourist_place"
+                            class="block font-medium text-sm text-gray-700 dark:text-gray-300"> ස්ථානයේ නම
+                            :</label>
+                        <x-text-input type="text" id="tourist_place" name="tourist_place" required />
+                    </div>
 
-                        <div class="mb-6">
-                            <label for="attaction"
-                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">ආකර්ශනය ඇතිවීමට හේතුව/ස්ථානයේ විශේෂත්වය
-                                :</label>
-                            <x-text-input type="text" id="attaction" name="attaction" required />
-                        </div>
+                    <div class="mb-6">
+                        <label for="attaction"
+                            class="block font-medium text-sm text-gray-700 dark:text-gray-300">ආකර්ශනය ඇතිවීමට හේතුව/ස්ථානයේ විශේෂත්වය
+                            :</label>
+                        <x-text-input type="text" id="attaction" name="attaction" required />
+                    </div>
 
-                        <div class="mb-6">
-                            <label for="right"
-                                class="block font-medium text-sm text-gray-700 dark:text-gray-300">අයිතිය
-                                :</label>
-                            <x-text-input type="text" id="right" name="right" required />
-                        </div>
+                    <div class="mb-6">
+                        <label for="right"
+                            class="block font-medium text-sm text-gray-700 dark:text-gray-300">අයිතිය
+                            :</label>
+                        <x-text-input type="text" id="right" name="right" required />
+                    </div>
 
 
-                        <br>
-                        <x-primary-button>insert</x-primary-button>
-                        <x-input-error :messages="$errors->all()" />
-                    </form>
+                    <br>
+                    <x-primary-button>insert</x-primary-button>
+                    <x-input-error :messages="$errors->all()" />
                 </form>
             </div>
 

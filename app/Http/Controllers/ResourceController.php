@@ -75,6 +75,7 @@ class ResourceController extends Controller
         $resources = Resource::join('r_has_g_n_d_s', 'resources.r_id', '=', 'r_has_g_n_d_s.r_id')
             ->where('r_has_g_n_d_s.gnd_uid', $gndUid)
             ->get([
+                'resources.r_id',
                 'resources.r_name',
                 'r_has_g_n_d_s.r_importance',
                 'r_has_g_n_d_s.r_is_used'
@@ -84,10 +85,23 @@ class ResourceController extends Controller
         return response()->json($resources);
     }
 
-    public function deleteResource($id)
+    public function deleteResource($id, $gndUid)
     {
-        return response()->json(
-            Resource::where('r_id', $id)->delete()
-        );
+        try {
+            // Remove only the link, not the resource itself
+            RHasGND::where('r_id', $id)
+                ->where('gnd_uid', $gndUid)
+                ->delete();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Resource unlinked from GND successfully.'
+            ]);
+        } catch (\Throwable $e) {
+            return response()->json([
+                'success' => false,
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 }

@@ -84,10 +84,23 @@ class SNZController extends Controller
         );
     }
 
-    public function deleteSNZ($id)
+    public function deleteSNZ($id, $gndUid)
     {
-        return response()->json(
-            SensitiveNatureZone::where('snz_id', $id)->delete()
-        );
+        try {
+            // Remove only the link between SNZ and GND
+            SNZHasGND::where('snz_id', $id)
+                ->where('gnd_uid', $gndUid)
+                ->delete();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Sensitive Nature Zone unlinked from GND successfully.'
+            ]);
+        } catch (\Throwable $e) {
+            return response()->json([
+                'success' => false,
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 }
