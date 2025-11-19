@@ -10,6 +10,7 @@ use App\Http\Controllers\WaterResourceController;
 use App\Http\Controllers\SNZController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\Admin\UserManagementController;
+use \App\Http\Controllers\NDController;
 
 //Register API routes for fetching location and basic info names
 Route::get('/api/ds-by-district/{d_code}', [LocationController::class, 'getDS']);
@@ -60,4 +61,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/api/get-resources/{gnd_uid}', [ResourceController::class, 'getResources']);
     Route::post('/api/insert-resource/{gnd_uid}', [ResourceController::class, 'insertResource']);
     Route::delete('/api/delete-resource/{r_id}/{gnd_uid}', [ResourceController::class, 'deleteResource']);
+
+    //ND Routes
+    Route::get('/api/get-nd-list', [NDController::class, 'getNDList']);
+    Route::post('/api/insert-nd/{gnd_uid}', [NDController::class, 'insertND']);
 });

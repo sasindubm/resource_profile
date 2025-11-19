@@ -250,4 +250,77 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    //Natural Disaster Section
+    document.getElementById('nd_problem').addEventListener('change', function () {
+        let check = this.value;
+        let parent = document.getElementById('ndSourceForm');
+        let existing = document.getElementById('other_nd_wrapper'); // wrapper id
+
+        // If "වෙනත්" is chosen
+        if (check === "වෙනත්") {
+            // Only add if not already present
+            if (!existing) {
+                let wrapper = document.createElement('div');
+                wrapper.className = "mb-6";
+                wrapper.id = "other_nd_wrapper"; // give wrapper an id
+
+                wrapper.innerHTML = `
+                <label for="other_nd"
+                    class="block font-semibold font-medium text-lg text-gray-700 dark:text-gray-300">
+                    වෙනත් ගැටළුව සදහන් කරන්න:
+                </label>
+                <input type="text" id="other_nd" required
+                    class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" />
+            `;
+
+                let secondChild = parent.children[2];
+                parent.insertBefore(wrapper, secondChild);
+            }
+        } else {
+            // Remove if exists
+            if (existing) {
+                parent.removeChild(existing);
+            }
+        }
+    });
+
+
+    function fetchNDList() {
+        fetch(`/api/get-nd-list`).then(res => res.json()).then(data => {
+            let parent = document.getElementById('nd_problem');
+            let secondChild = parent.children[1];
+            data.forEach(element => {
+                const option = document.createElement('option');
+                option.value = element.nd_name;
+                option.innerHTML = element.nd_name;
+                parent.insertBefore(option, secondChild);
+            });
+        });
+    }
+
+    fetchNDList();
+
+    document.getElementById('ndSourceForm').addEventListener('submit', function () {
+        let formdata = new FormData();
+        formdata.append('gnd_uid', gndUid);
+        formdata.append('nd_name', document.getElementById('nd_problem').value);
+        formdata.append('nd_period', document.getElementById('nd_period').value);
+        formdata.append('nd_solution', document.getElementById('suggestion').value);
+
+        const otherNd = document.getElementById('other_nd');
+        if (otherNd) {
+            formdata.append('other_nd', document.getElementById('other_nd').value);
+        }
+
+        fetch(`/api/insert-nd/${gndUid}`, { 
+            method: 'POST', 
+            headers: csrfHeaders, 
+            body: formdata 
+        })
+        .then(res => res.json())
+        .then(data => {
+            Swal.fire(data.success ? 'Success' : 'Error', data.message || data.error, data.success ? 'success' : 'error');
+            this.reset();
+        });
+    });
 });
