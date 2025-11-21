@@ -11,6 +11,7 @@ use App\Http\Controllers\SNZController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\Admin\UserManagementController;
 use \App\Http\Controllers\NDController;
+use \App\Http\Controllers\GHController;
 
 //Register API routes for fetching location and basic info names
 Route::get('/api/ds-by-district/{d_code}', [LocationController::class, 'getDS']);
@@ -65,4 +66,7 @@ Route::middleware('auth')->group(function () {
     //ND Routes
     Route::get('/api/get-nd-list', [NDController::class, 'getNDList']);
     Route::post('/api/insert-nd/{gnd_uid}', [NDController::class, 'insertND']);
+
+    Route::get('/api/get-gh', [GHController::class, 'getGH']);
+    Route::post('/api/insert-gh', [GHController::class, 'insertGH']);
 });

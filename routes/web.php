@@ -15,6 +15,10 @@ Route::get('/wait', function () {
     return view('WaitingScreen');
 })->name('wait');
 
+Route::get('/team/portfolio', function(){
+    return view('team.portfolio');
+})->name('team_portfolio');
+
 Route::middleware('auth', 'approved')->group(function () {
     Route::get('/admin', function () {
         return view('AdminPage');
